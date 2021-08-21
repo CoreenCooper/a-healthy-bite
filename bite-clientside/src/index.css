@@ -1,3 +1,30 @@
 body {
 	margin: 0;
 }
+
+#recipeIcon{
+	height: 150px;
+	width: 150px;
+	padding: 20px;
+}
+
+#category{
+	display: flex;
+	align-items: center;
+}
+div.item{
+	vertical-align: top;
+	display: inline-block;
+	text-align: center;
+	width: 120px;
+}
+
+.image{
+	width: 150px;
+	height: 150px;
+	background-color: bisque;
+}
+
+.caption{
+	display: block;
+}
