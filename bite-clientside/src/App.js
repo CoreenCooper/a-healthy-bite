@@ -8,6 +8,7 @@ import Recipes from "./Components/Recipes";
 import "./App.css";
 
 function App() {
+	const [recipes, setRecipes] = useState([]);
 	return (
 		<main className="App">
 			<Router>
