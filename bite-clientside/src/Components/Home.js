@@ -1,12 +1,12 @@
-
 import {useHistory } from "react-router-dom";
-
 
 const Home = ({ setCategory }) => {
   const history = useHistory();
+
   const handleSelection = () => {
     history.push("/recipes");
   };
+  
   return (
     <div>
       <h1 className="Heading-Title">A HEALTHY BITE</h1>

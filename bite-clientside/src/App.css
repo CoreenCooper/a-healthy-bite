@@ -7,7 +7,7 @@ body {
     margin-top: 20px;
   }
   
-  #recipeIcon {
+  #logo {
     height: 150px;
     width: 150px;
     padding: 20px;
@@ -61,14 +61,13 @@ body {
     background-color: rgb(22, 84, 38);
     height: 180px;
   }
-  
+/* Responsiveness ***************Media Queries******************/
   @media screen and (max-width: 280px) {
-    #recipeIcon {
+    #logo {
       height: 50px;
       width: 50px;
       padding: 0;
       margin: 10px 20px 10px 30px;
-  
     }
   
     .Heading-Title {
@@ -104,7 +103,7 @@ body {
   }
   
   @media screen and (max-width: 360px) and (min-width: 281px) {
-    #recipeIcon {
+    #logo {
       height: 60px;
       width: 60px;
       padding: 0;
@@ -144,7 +143,7 @@ body {
   }
   
   @media screen and (max-width: 411px) and (min-width: 361px) {
-    #recipeIcon {
+    #logo {
       height: 60px;
       width: 60px;
       padding: 0;
@@ -184,7 +183,7 @@ body {
   }
   
   @media screen and (max-width: 414px) and (min-width: 412px) {
-    #recipeIcon {
+    #logo {
       height: 60px;
       width: 60px;
       padding: 0;
@@ -224,7 +223,7 @@ body {
   }
   
   @media screen and (max-width: 540px) and (min-width: 415px) {
-    #recipeIcon {
+    #logo {
       height: 80px;
       width: 80px;
       padding: 0;
@@ -267,7 +266,7 @@ body {
   }
   
   @media screen and (max-width: 768px) and (min-width: 541px) {
-    #recipeIcon {
+    #logo {
       height: 100px;
       width: 100px;
       padding: 0;
@@ -311,7 +310,7 @@ body {
   }
   
   @media screen and (max-width: 1024px) and (min-width: 769px) {
-    #recipeIcon {
+    #logo {
       height: 150px;
       width: 150px;
       padding: 0;
