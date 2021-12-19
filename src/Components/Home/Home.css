@@ -1,0 +1,47 @@
+.home-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.home-title {
+  font-family: "Copperplate";
+  font-size: 50px;
+}
+
+.subheading {
+  font-size: 20px;
+}
+
+.home-title, .subheading {
+  text-align: center;
+}
+
+.home-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.home-list-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-list-images {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.home-list-images:hover {
+  opacity: 1;
+}
+
+.home-list-categories {
+  font-size: 18px;
+}

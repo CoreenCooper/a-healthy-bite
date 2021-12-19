@@ -1,4 +1,4 @@
-import "../styling/Recipes.css";
+import "./Recipes.css";
 
 const Recipes = ({ category, recipes }) => {
   return (

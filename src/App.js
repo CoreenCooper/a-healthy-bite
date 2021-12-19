@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Home from "./Components/Home";
-import NavBar from "./Components/NavBar";
-import Recipe from "./Components/Recipe";
-import Recipes from "./Components/Recipes";
+import Home from "./Components/Home/Home.js";
+import NavBar from "./Components/NavBar/NavBar.js";
+import Recipe from "./Components/Recipe/Recipe.js";
+import Recipes from "./Components/Recipes/Recipes.js";
 import "./App.css";
 
 function App() {

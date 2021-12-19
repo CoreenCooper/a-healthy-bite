@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import convertSummary from "../tools/convertSummary";
+import convertSummary from "../../tools/convertSummary";
 import axios from "axios";
-import "../styling/Recipe.css";
+import "./Recipe.css";
 
 const Recipe = () => {
   const [recipe, setRecipe] = useState({});

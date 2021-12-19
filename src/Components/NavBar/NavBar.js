@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./NavBar.css"
 
 const NavBar = () => {
   return (
@@ -12,9 +13,12 @@ const NavBar = () => {
           id="logo"
         />
       </NavLink>
-      {/* <NavLink to={`/recipes`}>
-        <button>Back</button>
-      </NavLink> */}
+      {/* <img
+        className="hamburger-menu-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/220px-Hamburger_icon.svg.png"
+        alt="hamburger menu"
+        id="hamburger-menu"
+      /> */}
     </nav>
   );
 };

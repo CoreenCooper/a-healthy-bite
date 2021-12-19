@@ -1,22 +1,29 @@
+  * {
+    /* margin: 0; */
+    /* padding: 0; */
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
   /* ************* CSS RESET ****************** */
 
-  html, body, header, nav, h1, a,
+  /* html, body, header, nav, h1, a,
   ul, ol, li, strong, main, button, i,
   section, img, div, h2, p, form,
   fieldset, label, input, textarea,
   span, article, footer, time, small {
     margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font: inherit;
-    color: inherit;
-    text-align: inherit;
-    text-decoration: inherit;
-    vertical-align: inherit;
-    box-sizing: inherit;
-    background: transparent;
-  }
+    padding: 0; */
+    /* border: 0; */
+    /* outline: 0; */
+    /* font: inherit; */
+    /* color: inherit; */
+    /* text-align: inherit; */
+    /* text-decoration: inherit; */
+    /* vertical-align: inherit; */
+    /* box-sizing: inherit; */
+    /* background: transparent; */
+  /* } */
   
   ul, ol {
     list-style: none;
@@ -38,7 +45,9 @@
     -moz-appearance: none;
   }
   
-  button,
+  /* button,
   input[type="submit"] {
     cursor: pointer;
-  }
+  } */
+
+

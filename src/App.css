@@ -1,25 +1,22 @@
-/* ****************************************** */
-  .categories {
-    margin-top: 20px;
-  }
-  
-  #logo {
-    height: 150px;
-    width: 150px;
-    padding: 20px;
-  }
-  
-  .home-title {
-    font-family: "Copperplate";
-    text-align: center;
-    font-size: 60px;
-  }
-  .subheading {
-    text-align: center;
-    font-size: 25px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+}
+
+footer {
+  background-color: rgb(22, 84, 38);
+  height: 50px;
+  /* border: orangered solid 1px; */
+}
+
+
+
+/* ************Don't know what this is styling************** */ 
+ 
+/*   
   div.item {
     vertical-align: top;
     display: inline-block;
@@ -27,28 +24,9 @@
     width: 120px;
     margin-right: 45px;
   }
-  
-  .images {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    opacity: 0.5;
-  }
-  
-  .images:hover {
-    opacity: 1;
-  }
-  
-  ul li {
-    list-style: none;
-    width: 260px;
-  }
-  
-  footer {
-    background-color: rgb(22, 84, 38);
-    height: 180px;
-  }
-  
+   */ 
+
+/*   
   @media screen and (max-width: 280px) {
     #logo {
       height: 50px;
@@ -57,31 +35,32 @@
       margin: 10px 20px 10px 30px;
   
     }
-  
+      
     .home-title {
-      font-size: 24px;
-    }
+        font-size: 24px;
+      }
+    
+      .subheading {
+        font-size: 16px;
+      }
   
-    .subheading {
-      font-size: 16px;
-    }
+      .images {
+        width: 90px;
+        height: 90px;
+      }
+    
+      .categories {
+          font-size: 16px;
+      }
+      
+      div.item {
+          width: 300px;
+      }
 
-    .images {
-      width: 90px;
-      height: 90px;
-    }
-  
     footer {
       height: 30px;
     }
   
-    .categories {
-      font-size: 16px;
-    }
-  
-    div.item {
-      width: 300px;
-    }
   }
   
   @media screen and (max-width: 360px) and (min-width: 281px) {
@@ -289,4 +268,4 @@
       width: 300px;
     }  
   }
-  
+   */

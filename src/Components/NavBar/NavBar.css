@@ -1,0 +1,21 @@
+nav {
+  /* border: green solid 1px; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* .navbar_title {
+  border: pink solid 1px;
+} */
+
+#logo {
+  /* border: blue solid 1px; */
+  width: 100px;
+}
+
+/* .hamburger-menu-img {
+  border: blue solid 1px;
+  width: 30px;
+} */
+  
