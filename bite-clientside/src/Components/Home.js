@@ -1,8 +1,9 @@
 import { useHistory } from "react-router-dom";
-const Home = ({ setCategory }) => {
+const Home = ({ setCategory, fetchRecipes }) => {
   const history = useHistory();
 
   const handleSelection = () => {
+    fetchRecipes();
     history.push("/recipes");
   };
 
@@ -15,23 +16,23 @@ const Home = ({ setCategory }) => {
             <li className="item" onClick={() => setCategory("Vegan")}>
               <img
                 className="image"
-                src="https://www.mississippivegan.com/wp-content/uploads/2017/07/bowl-1.jpg"
-                alt="vegan"
+                src="https://spoonacular.com/recipeImages/715769-636x393.jpg"
+                alt="Vegan"
               />
               <p className="caption">Vegan</p>
             </li>
             <li className="item" onClick={() => setCategory("Vegetarian")}>
               <img
                 className="image"
-                src="https://domf5oio6qrcr.cloudfront.net/medialibrary/6054/f5282d05-33f5-4c93-a08e-b000164a54db.jpg"
-                alt="vegetarian"
+                src="https://spoonacular.com/recipeImages/716426-636x393.jpg"
+                alt="Vegetarian"
               />
               <p className="caption">Vegetarian</p>
             </li>
             <li className="item" onClick={() => setCategory("Ketogenic")}>
               <img
                 className="image"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIDPdnWFXD3kloqBBy4nYwfFCfRfbvrUHC3w&usqp=CAU"
+                src="https://spoonacular.com/recipeImages/794538-636x393.jpg"
                 alt="Ketogenic"
               />
               <p className="caption">Ketogenic</p>
@@ -39,8 +40,8 @@ const Home = ({ setCategory }) => {
             <li className="item" onClick={() => setCategory("Pescetarian")}>
               <img
                 className="image"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVZvwHaQUuryT0WbnBSYTjwInC68KNTpzoWw&usqp=CAU"
-                alt="pescetarian"
+                src="https://spoonacular.com/recipeImages/715540-636x393.jpg"
+                alt="Pescetarian"
               />
               <p className="caption">Pescetarian</p>
             </li>
