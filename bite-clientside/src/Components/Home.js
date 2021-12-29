@@ -1,9 +1,11 @@
 import { useHistory } from "react-router-dom";
 const Home = ({ setCategory }) => {
   const history = useHistory();
+
   const handleSelection = () => {
     history.push("/recipes");
   };
+
   return (
     <div>
       <h1 className="Heading-Title">A HEALTHY BITE</h1>
@@ -12,7 +14,7 @@ const Home = ({ setCategory }) => {
       <div id="category">
         <div className="item">
           <ul onClick={handleSelection}>
-            <li onClick={() => setCategory("vegan")}>
+            <li onClick={() => setCategory("Vegan")}>
               <img
                 src="https://www.mississippivegan.com/wp-content/uploads/2017/07/bowl-1.jpg"
                 alt="vegan"
@@ -25,7 +27,7 @@ const Home = ({ setCategory }) => {
 
         <div className="item">
           <ul onClick={handleSelection}>
-            <li onClick={() => setCategory("vegetarian")}>
+            <li onClick={() => setCategory("Vegetarian")}>
               <img
                 src="https://domf5oio6qrcr.cloudfront.net/medialibrary/6054/f5282d05-33f5-4c93-a08e-b000164a54db.jpg"
                 alt="vegetarian"
@@ -37,10 +39,10 @@ const Home = ({ setCategory }) => {
         </div>
         <div className="item">
           <ul onClick={handleSelection}>
-            <li onClick={() => setCategory("ketogenic")}>
+            <li onClick={() => setCategory("Ketogenic")}>
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIDPdnWFXD3kloqBBy4nYwfFCfRfbvrUHC3w&usqp=CAU"
-                alt="ketogenic"
+                alt="Ketogenic"
                 className="image"
               />
               <p className="caption">Ketogenic</p>
@@ -49,7 +51,7 @@ const Home = ({ setCategory }) => {
         </div>
         <div className="item">
           <ul onClick={handleSelection}>
-            <li onClick={() => setCategory("pescetarian")}>
+            <li onClick={() => setCategory("Pescetarian")}>
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVZvwHaQUuryT0WbnBSYTjwInC68KNTpzoWw&usqp=CAU"
                 alt="pescetarian"
