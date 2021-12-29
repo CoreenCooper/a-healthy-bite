@@ -15,7 +15,7 @@ function App() {
 		const fetchRecipes = async () => {
 			try {
 				const res = await axios.get(
-					`https://api.spoonacular.com/recipes/complexSearch?apiKey=85693dccd3054490ad46f26d5834a03d&query=${category}&number=9`
+					`https://api.spoonacular.com/recipes/complexSearch?apiKey=85693dccd3054490ad46f26d5834a03d&query=${category}&number=1`
 					// `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${diet}&${offset}&number=3`
 					// `https://api.spoonacular.com/recipes/complexSearch?apiKey=85693dccd3054490ad46f26d5834a03d&query=Ovo-Vegetarian&number=0&offset=900`
 				);

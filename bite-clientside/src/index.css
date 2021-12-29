@@ -32,7 +32,8 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-div.item {
+
+.item {
   vertical-align: top;
   display: inline-block;
   text-align: center;
