@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./Components/NavBar";
@@ -11,24 +11,22 @@ function App() {
 	const [recipes, setRecipes] = useState([]);
 	const [category, setCategory] = useState("");
 
-	const fetchRecipes = async () => {
-		try {
-			const res = await axios.get(
-				`https://api.spoonacular.com/recipes/complexSearch?apiKey=85693dccd3054490ad46f26d5834a03d&query=${category}&offset=${Math.floor(Math.random() * 300)}&number=3&nutrition=false`
-				// `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${diet}&${offset}&number=3`
-				// `https://api.spoonacular.com/recipes/complexSearch?apiKey=85693dccd3054490ad46f26d5834a03d&query=Ovo-Vegetarian&number=0&offset=900`
-			);
-			console.log(res.data.results)
-			setRecipes(res.data.results);
-		} catch (err) {
-			return err;
-		}
-	};
-
-
-	// useEffect(() => {
-	// 	fetchRecipes();
-	// }, [category]);
+	useEffect(() => {
+		const fetchRecipes = async () => {
+			try {
+				const res = await axios.get(
+					`https://api.spoonacular.com/recipes/complexSearch?apiKey=291407e47d2341e997364c6bb4fda7d0&query=${category}&offset=${Math.floor(Math.random() * 300)}&number=1&nutrition=false`
+					// `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${diet}&${offset}&number=3`
+					// `https://api.spoonacular.com/recipes/complexSearch?apiKey=85693dccd3054490ad46f26d5834a03d&query=Ovo-Vegetarian&number=0&offset=900`
+				);
+				console.log(res.data.results)
+				setRecipes(res.data.results);
+			} catch (err) {
+				return err;
+			}
+		};
+		fetchRecipes();
+	}, [category]);
 
 	return (
 		<main className="App">
@@ -36,7 +34,7 @@ function App() {
 				<NavBar />
 				<Switch>
 					<Route exact path="/">
-						<Home setCategory={setCategory} fetchRecipes={fetchRecipes}/>
+						<Home setCategory={setCategory} />
 					</Route>
 					{/* Index */}
 					<Route exact path="/recipes">
