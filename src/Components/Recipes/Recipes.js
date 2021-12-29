@@ -1,6 +1,7 @@
-import "./Recipes.css";
+// import "./Recipes.css";
 
 const Recipes = ({ category, recipes }) => {
+  console.log(recipes)
   return (
     <main>
       <h2>List of Recipes from category {category}</h2>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import convertSummary from "../../tools/convertSummary";
 import axios from "axios";
-import "./Recipe.css";
+// import "./Recipe.css";
 
 const Recipe = () => {
   const [recipe, setRecipe] = useState({});
@@ -13,7 +13,7 @@ const Recipe = () => {
     const fetchRecipe = async () => {
       try {
         const res = await axios.get(
-          `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_API_KEY}&includeNutrition=false`
+          `https://api.spoonacular.com/recipes/716268/information?apiKey=${process.env.REACT_APP_API_KEY}&includeNutrition=false`
         );
         setRecipe(res.data);
       } catch (error) {

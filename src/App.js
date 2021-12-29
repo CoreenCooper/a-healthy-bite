@@ -15,7 +15,7 @@ function App() {
 		const fetchRecipes = async () => {
 			try {
 				const res = await axios.get(
-					`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&diet=${category}&number=9`
+					`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&type=${category}&number=9`
 				);
 				setRecipes(res.data.results);
 			} catch (error) {
