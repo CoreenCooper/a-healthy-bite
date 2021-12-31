@@ -1,45 +1,8 @@
-import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-// import DisplayItems from "../../tools/homeDisplayItems.js"
-import axios from "axios";
 // import "./Home.css";
 
 const Home = ({ setCategory }) => {
   const history = useHistory();
-  const [recipe, setRecipe] = useState({});
-  const { title, image, sourceUrl } = recipe;
-  const [samples, setSamples] = useState({});
-  // const { title, image, sourceUrl } = samples;
-
-  // const { id } = useParams();
-
-  const fetchSpotlightImage = async () => {
-    try {
-      const res = await axios.get(
-        `https://api.spoonacular.com/recipes/716268/information?apiKey=${process.env.REACT_APP_API_KEY}`
-      );
-      setRecipe(res.data);
-    } catch (error) {
-      return error;
-    }
-  };
-  
-  const fetchSampleImages = async () => {
-    try {
-      const res = await axios.get(
-        `https://api.spoonacular.com/recipes/informationBulk?apiKey=${process.env.REACT_APP_API_KEY}&ids=638604,716429,1095750,640819,66429,660227`
-      );
-      console.log(res.data)
-      setSamples(res.data);
-    } catch (error) {
-      return error;
-    }
-  };
-
-  useEffect(() => {
-    fetchSpotlightImage();
-    fetchSampleImages();
-  }, []);
 
   const handleSelection = () => {
     history.push("/recipes");
@@ -47,33 +10,49 @@ const Home = ({ setCategory }) => {
   
   
   return (
-    <main className="home-page">
-      <div>
-      <h1 className="home-title">A HEALTHY BITE</h1>
-      <h2 className="subheading">Healthy food for every mood.</h2>
-      </div>
-
-      <h2 className="recipe-title">{title}</h2>
-      <img src={image} alt="vegan" className="recipe-image" />
-      <a href={sourceUrl} target="_blank" rel="noreferrer">
-        Click for more information
-      </a>
-
-      <ul className="home-list" onClick={handleSelection}>
-        {samples.map((item)=>{
-          return (
-            <li className="home-list-items" onClick={() => setCategory(item.title)} key={item.title}>
-            <img
-              className="home-list-images"
-              src={item.image}
-              alt={item.title}
-            />
-            <h3 className="home-list-categories">{item.title}</h3>
-            </li>
-          );
-        })}
+    <div>
+      <img
+        className="home-main-image"
+        src="https://spoonacular.com/recipeImages/658509-240x150.jpg"
+        alt="Vegan"
+      />
+      <ul id="category" onClick={handleSelection}>
+        <li className="item" onClick={() => setCategory("Vegan")}>
+          <img
+            className="image"
+            src="https://spoonacular.com/recipeImages/636231-240x150.jpg"
+            alt="Vegan"
+          />
+          <p className="caption">Vegan</p>
+        </li>
+        <li className="item" onClick={() => setCategory("Vegetarian")}>
+          <img
+            className="image"
+            src="https://spoonacular.com/recipeImages/642283-240x150.jpg"
+            alt="Vegetarian"
+          />
+          <p className="caption">Vegetarian</p>
+        </li>
+        <li className="item" onClick={() => setCategory("Pescetarian")}>
+          <img
+            className="image"
+            src="https://spoonacular.com/recipeImages/639411-240x150.jpg"
+            alt="Pescetarian"
+          />
+          <p className="caption">Pescetarian</p>
+        </li>
+        <li className="item" onClick={() => setCategory("Ketogenic")}>
+          <img
+            className="image"
+            src="https://spoonacular.com/recipeImages/638626-240x150.jpg"
+            // src="https://spoonacular.com/recipeImages/659135-312x231.jpg"
+            alt="Ketogenic"
+          />
+          <p className="caption">Ketogenic</p>
+        </li>
       </ul>
-    </main>
+      <footer className="footer"></footer>
+    </div>
   );
 };
 
