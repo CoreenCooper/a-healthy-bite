@@ -1,24 +1,28 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./NavBar.css"
+import "./NavBar.css";
 
 const NavBar = () => {
   return (
-    <nav>
-      {/* show logo without back button on home page */}
-      <NavLink to="/">
-        <img
-          src="https://spoonacular.com/application/frontend/images/food-api/ontology2.svg"
-          alt="logo"
-          id="logo"
-        />
-      </NavLink>
-      {/* <img
-        className="hamburger-menu-img"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/220px-Hamburger_icon.svg.png"
-        alt="hamburger menu"
-        id="hamburger-menu"
-      /> */}
+    <nav className="nav-bar">
+      <div className="logo">
+        <h1 className="Heading-Title">A HEALTHY BITE</h1>
+        <h5 className="Subheading">Healthy food for every mood.</h5>
+      </div>
+      <ul>
+        <NavLink to="/">
+          <li>Home</li>
+        </NavLink>
+        <NavLink  to="/about">
+          <li>About</li>
+        </NavLink>
+        <NavLink to="/recipes">
+          <li>Recipes</li>
+        </NavLink>
+        <NavLink to="/contact">
+          <li>Contact</li>
+        </NavLink>
+      </ul>
     </nav>
   );
 };
