@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 * {
   margin: 0;
@@ -7,13 +7,21 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   /* height: 100vh; */
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
+
+a,
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
 
 
 /**************** CSS RESET *******************/

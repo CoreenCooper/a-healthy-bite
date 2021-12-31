@@ -10,44 +10,45 @@ const Home = ({ setCategory }) => {
   
   return (
     <section className="home-section">
-      <img
+      <div className="home-main-image"></div>
+      {/* <img
         className="home-main-image"
         src="https://images.unsplash.com/photo-1461988320302-91bde64fc8e4"
         alt="Vegan"
-      />
-      <ul id="category" onClick={handleSelection}>
-        <li className="item" onClick={() => setCategory("Vegan")}>
+      /> */}
+      <ul className="home-category-list" id="category" onClick={handleSelection}>
+        <li className="home-category-list-items" onClick={() => setCategory("Vegan")}>
           <img
-            className="image"
+            className="home-category-images"
             src="https://spoonacular.com/recipeImages/636231-240x150.jpg"
             alt="Vegan"
           />
-          <p className="caption">Vegan</p>
+          <button className="home-category-image-captions">Vegan</button>
         </li>
-        <li className="item" onClick={() => setCategory("Vegetarian")}>
+        <li className="home-category-list-items" onClick={() => setCategory("Vegetarian")}>
           <img
-            className="image"
+            className="home-category-images"
             src="https://spoonacular.com/recipeImages/642283-240x150.jpg"
             alt="Vegetarian"
           />
-          <p className="caption">Vegetarian</p>
+          <button className="home-category-image-captions">Vegetarian</button>
         </li>
-        <li className="item" onClick={() => setCategory("Pescetarian")}>
+        <li className="home-category-list-items" onClick={() => setCategory("Pescetarian")}>
           <img
-            className="image"
+            className="home-category-images"
             src="https://spoonacular.com/recipeImages/639411-240x150.jpg"
             alt="Pescetarian"
           />
-          <p className="caption">Pescetarian</p>
+          <button className="home-category-image-captions">Pescetarian</button>
         </li>
-        <li className="item" onClick={() => setCategory("Ketogenic")}>
+        <li className="home-category-list-items" onClick={() => setCategory("Ketogenic")}>
           <img
-            className="image"
+            className="home-category-images"
             src="https://spoonacular.com/recipeImages/638626-240x150.jpg"
             // src="https://spoonacular.com/recipeImages/659135-312x231.jpg"
             alt="Ketogenic"
           />
-          <p className="caption">Ketogenic</p>
+          <button className="home-category-image-captions">Ketogenic</button>
         </li>
       </ul>
       <footer className="footer"></footer>

@@ -1,8 +1,33 @@
 .home-main-image {
-  position: relative;
-  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1461988320302-91bde64fc8e4");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
 }
 
+.home-category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 25px;
+}
+
+.home-category-list-items {
+  background-color: olivedrab;
+  margin: 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px gray;
+
+}
+
+.home-category-image-captions {
+  display: block;
+  padding-bottom: 10px;
+  color: white;
+  border: none;
+  background: none;
+  margin: auto;
+}
 
 /* .home-page {
   height: 100vh;

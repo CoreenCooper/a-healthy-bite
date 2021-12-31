@@ -9,7 +9,7 @@ const NavBar = () => {
         <h1 className="Heading-Title">A HEALTHY BITE</h1>
         <h5 className="Subheading">Healthy food for every mood.</h5>
       </NavLink>
-      <ul className="nav-menu-items">
+      <ul className="nav-menu collapsed-nav-menu">
         <NavLink to="/">
           <li>Home</li>
         </NavLink>
