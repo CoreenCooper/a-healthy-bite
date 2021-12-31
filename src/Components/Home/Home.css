@@ -1,4 +1,10 @@
-.home-page {
+.home-main-image {
+  position: relative;
+  width: 100%;
+}
+
+
+/* .home-page {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,12 +42,13 @@
   height: 250px;
   border-radius: 50%;
   opacity: 0.5;
-}
-
-.home-list-images:hover {
-  opacity: 1;
-}
-
-.home-list-categories {
-  font-size: 18px;
-}
+  
+  .home-list-images:hover {
+    opacity: 1;
+  }
+  
+  .home-list-categories {
+    font-size: 18px;
+  }
+  
+} */

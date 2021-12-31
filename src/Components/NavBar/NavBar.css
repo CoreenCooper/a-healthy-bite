@@ -1,18 +1,34 @@
-nav {
-  /* border: green solid 1px; */
+.nav-bar {
+  /* border: orange solid 1px; */
+  z-index: 1;
+  position: absolute;
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
+  width: 100vw;
+  padding: 15px 5px 0 5px;
 }
 
-/* .navbar_title {
-  border: pink solid 1px;
-} */
-
-#logo {
+.logo {
   /* border: blue solid 1px; */
-  padding: 3px 0 0 3px;
-  width: 100px;
+  text-align: center;
+}
+
+.nav-menu-items {
+  /* border: green solid 1px; */
+  color: beige;
+  display: flex;
+  width: 25vw;
+  justify-content: space-between;
+  align-self: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav li {
+  /* padding-left: 15px; */
 }
 
 /* .hamburger-menu-img {

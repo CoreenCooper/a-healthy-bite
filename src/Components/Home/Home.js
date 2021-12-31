@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-// import "./Home.css";
+import "./Home.css";
 
 const Home = ({ setCategory }) => {
   const history = useHistory();
@@ -8,12 +8,11 @@ const Home = ({ setCategory }) => {
     history.push("/recipes");
   };
   
-  
   return (
-    <div>
+    <section className="home-section">
       <img
         className="home-main-image"
-        src="https://spoonacular.com/recipeImages/658509-240x150.jpg"
+        src="https://images.unsplash.com/photo-1461988320302-91bde64fc8e4"
         alt="Vegan"
       />
       <ul id="category" onClick={handleSelection}>
@@ -52,7 +51,7 @@ const Home = ({ setCategory }) => {
         </li>
       </ul>
       <footer className="footer"></footer>
-    </div>
+    </section>
   );
 };
 

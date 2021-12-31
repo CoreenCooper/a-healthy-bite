@@ -5,11 +5,11 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <nav className="nav-bar">
-      <div className="logo">
+      <NavLink to="/" className="logo">
         <h1 className="Heading-Title">A HEALTHY BITE</h1>
         <h5 className="Subheading">Healthy food for every mood.</h5>
-      </div>
-      <ul>
+      </NavLink>
+      <ul className="nav-menu-items">
         <NavLink to="/">
           <li>Home</li>
         </NavLink>

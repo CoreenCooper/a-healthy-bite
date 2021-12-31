@@ -11,21 +11,21 @@ function App() {
   const [recipes, setRecipes] = useState([]);
   const [category, setCategory] = useState("");
 
-//   useEffect(() => {
-//     const fetchRecipes = async () => {
-//       try {
-//         const res = await axios.get(
-//           `https://api.spoonacular.com/recipes/complexSearch?apiKey=291407e47d2341e997364c6bb4fda7d0&query=${category}&offset=${Math.floor(
-//             Math.random() * 300
-//           )}&number=1&nutrition=false`
-//         );
-//         setRecipes(res.data.results);
-//       } catch (error) {
-//         return error;
-//       }
-//     };
-//     fetchRecipes();
-//   }, [category]);
+  useEffect(() => {
+    const fetchRecipes = async () => {
+      try {
+        const res = await axios.get(
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${category}&offset=${Math.floor(
+            Math.random() * 300
+          )}&number=1&nutrition=false`
+        );
+        setRecipes(res.data.results);
+      } catch (error) {
+        return error;
+      }
+    };
+    fetchRecipes();
+  }, [category]);
 
   return (
     <section className="App">
