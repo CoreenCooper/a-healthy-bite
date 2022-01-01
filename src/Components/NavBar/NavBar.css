@@ -40,8 +40,6 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: #fff !important;
 }
 
-/* STOP HERE */
-
 ::placeholder {
   color: white;
   opacity: .75;
@@ -55,6 +53,12 @@ input:-webkit-autofill:active {
   color: white;
   background-color: olivedrab;
 }
+
+.fa-search:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
 .nav-menu {
   width: 20vw;
   display: flex;
