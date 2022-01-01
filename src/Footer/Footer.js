@@ -1,14 +1,18 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer>
       <ul className="footer-list">
-        <li>Email Me</li>
-        <li>GitHub</li>
-        <li>Portfolio</li>
+        <li>
+          <i class="fab fa-github"></i>
+          <a> GitHub</a>
+        </li>
+        <li>
+          <i class="fas fa-envelope"></i>
+          <a> For Hire</a>
+        </li>
       </ul>
     </footer>
   );

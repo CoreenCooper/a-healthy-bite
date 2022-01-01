@@ -6,8 +6,8 @@ const NavBar = () => {
   return (
     <nav className="nav-bar">
       <NavLink to="/" className="logo">
-        <h1 className="Heading-Title">A HEALTHY BITE</h1>
-        <h5 className="Subheading">Healthy food for every mood.</h5>
+        <h1 className="logo-title">A Healthy Bite</h1>
+        <h5 className="Subheading">Healthy food for every mood</h5>
       </NavLink>
       <ul className="nav-menu collapsed-nav-menu">
         <NavLink to="/">

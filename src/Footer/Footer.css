@@ -1,0 +1,11 @@
+.footer-list {
+    display: flex;
+    color: white;
+    padding: 4px 0 3px;
+    justify-content: space-around;
+    background-color: olivedrab;
+}
+
+.footer-list li:hover {
+    color: black;
+}

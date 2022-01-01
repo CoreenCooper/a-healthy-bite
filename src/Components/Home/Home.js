@@ -66,7 +66,6 @@ const Home = ({ setCategory }) => {
           <button className="home-category-button">Ketogenic</button>
         </li>
       </ul>
-      <footer className="footer"></footer>
     </section>
   );
 };

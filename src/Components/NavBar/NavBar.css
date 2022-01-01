@@ -1,25 +1,35 @@
 .nav-bar {
   z-index: 1;
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
   width: 100vw;
+  display: flex;
+  position: absolute;
   padding: 10px 30px 0 30px;
+  justify-content: space-between;
 }
 
 .logo {
   text-align: center;
 }
 
+.logo-title {
+  /* font-family: 'Gentium Book Basic', serif; */
+  font-family: 'Kaushan Script', cursive;
+  font-size: 32px;
+}
+
 .nav-menu {
-  color: beige;
+  width: 20vw;
   display: flex;
-  width: 25vw;
-  justify-content: space-between;
+  color: beige;
   align-self: center;
+  justify-content: space-between;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+}
+
+nav a:hover {
+  color: olivedrab;
 }
