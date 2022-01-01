@@ -8,7 +8,6 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  /* height: 100vh; */
 }
 
 ul,
@@ -21,8 +20,6 @@ button,
 input[type="submit"] {
   cursor: pointer;
 }
-
-
 
 /**************** CSS RESET *******************/
 /* html, body, header, nav, h1, a,

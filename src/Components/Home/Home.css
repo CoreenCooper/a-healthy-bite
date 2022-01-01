@@ -1,79 +1,51 @@
+.home-section {
+ text-align: center;
+}
+
 .home-main-image {
   background-image: url("https://images.unsplash.com/photo-1461988320302-91bde64fc8e4");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 50vh;
+}
+
+.home-category-heading {
+  padding: 20px;
+  height: 10vh;
+  margin: 15px 0;
+}
+
+.home-category-heading h1 {
+  font-size: 32px;
 }
 
 .home-category-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 25px;
+  height: 30vh;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .home-category-list-items {
   background-color: olivedrab;
-  margin: 20px;
+  margin: 15px 20px;
   cursor: pointer;
-  box-shadow: 2px 2px 5px gray;
-
+  box-shadow: 0 0 5px 1px gray;
+  transition: all .2s ease-in-out;
 }
 
-.home-category-image-captions {
+.home-category-list-items:hover {
+  transform: scale(1.25);
+}
+
+.home-category-button {
+  font-size: 18px;
   display: block;
-  padding-bottom: 10px;
+  padding-bottom: 4%;
   color: white;
   border: none;
   background: none;
   margin: auto;
 }
-
-/* .home-page {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.home-title {
-  font-family: "Copperplate";
-  font-size: 50px;
-}
-
-.subheading {
-  font-size: 20px;
-}
-
-.home-title, .subheading {
-  text-align: center;
-}
-
-.home-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-}
-
-.home-list-items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.home-list-images {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  opacity: 0.5;
-  
-  .home-list-images:hover {
-    opacity: 1;
-  }
-  
-  .home-list-categories {
-    font-size: 18px;
-  }
-  
-} */

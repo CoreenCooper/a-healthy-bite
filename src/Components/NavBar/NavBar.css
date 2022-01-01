@@ -1,20 +1,17 @@
 .nav-bar {
-  /* border: orange solid 1px; */
   z-index: 1;
   position: absolute;
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  padding: 15px 5px 0 5px;
+  padding: 10px 30px 0 30px;
 }
 
 .logo {
-  /* border: blue solid 1px; */
   text-align: center;
 }
 
 .nav-menu {
-  /* border: green solid 1px; */
   color: beige;
   display: flex;
   width: 25vw;
@@ -26,13 +23,3 @@ nav a {
   color: white;
   text-decoration: none;
 }
-
-nav li {
-  /* padding-left: 15px; */
-}
-
-/* .hamburger-menu-img {
-  border: blue solid 1px;
-  width: 30px;
-} */
-  

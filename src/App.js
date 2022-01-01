@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Footer from "./Footer.js/Footer.js";
 import Home from "./Components/Home/Home.js";
 import NavBar from "./Components/NavBar/NavBar.js";
 import Recipe from "./Components/Recipe/Recipe.js";
@@ -42,7 +43,7 @@ function App() {
             <Recipe />
           </Route>
         </Switch>
-        <footer></footer>
+        <Footer />
       </Router>
     </section>
   );

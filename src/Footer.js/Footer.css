@@ -1,0 +1,12 @@
+footer {
+    border: olivedrab solid 1px;
+}
+
+.footer-list {
+    bottom: 0;
+    padding-bottom: 10px;
+    display: flex;
+    color: white;
+    background-color: olivedrab;
+    justify-content: space-around;
+}
