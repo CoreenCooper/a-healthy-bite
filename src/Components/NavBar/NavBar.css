@@ -5,6 +5,7 @@
   position: absolute;
   padding: 10px 30px 0 30px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -12,15 +13,52 @@
 }
 
 .logo-title {
-  /* font-family: 'Gentium Book Basic', serif; */
   font-family: 'Kaushan Script', cursive;
   font-size: 32px;
 }
 
+.nav-search-form {
+  background-color: rgb(0, 0, 0, .5);
+  border-radius: 20px;
+  padding: 3px;
+  border: white solid 2.5px;
+  height: 40px;
+}
+
+input {
+  color: white;
+  font-size: 18px;
+  padding: 3px 10px;
+  text-align: center;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+}
+
+/* STOP HERE */
+
+::placeholder {
+  color: white;
+  opacity: .75;
+}
+
+.fa-search {
+  margin: -7px -25px 0 0;
+  border-radius: 0 20px 20px 0;
+  border: white solid 2.5px;
+  padding: 11px;
+  color: white;
+  background-color: olivedrab;
+}
 .nav-menu {
   width: 20vw;
   display: flex;
-  color: beige;
+  color: white;
   align-self: center;
   justify-content: space-between;
 }

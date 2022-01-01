@@ -9,11 +9,17 @@ const NavBar = () => {
         <h1 className="logo-title">A Healthy Bite</h1>
         <h5 className="Subheading">Healthy food for every mood</h5>
       </NavLink>
+      <form className="nav-search-form">
+        <label htmlFor="nav-input">
+          <input name="nav-input" type="text" placeholder="Search Recipes Here" size="30" />
+        </label>
+        <button><i class="fas fa-search"></i></button>
+      </form>
       <ul className="nav-menu collapsed-nav-menu">
         <NavLink to="/">
           <li>Home</li>
         </NavLink>
-        <NavLink  to="/about">
+        <NavLink to="/about">
           <li>About</li>
         </NavLink>
         <NavLink to="/recipes">

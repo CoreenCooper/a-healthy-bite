@@ -19,8 +19,15 @@ ol {
 
 a,
 button,
-input[type="submit"] {
+input {
   cursor: pointer;
+  border: none;
+  background: none;
+  background-color: transparent;
+}
+
+input {
+  outline: 0;
 }
 
 /**************** CSS RESET *******************/
