@@ -7,11 +7,11 @@ const Footer = () => {
       <ul className="footer-list">
         <li>
           <i class="fab fa-github"></i>
-          <a> GitHub</a>
+          <a href="https://github.com/CoreenCooper"> GitHub</a>
         </li>
         <li>
           <i class="fas fa-envelope"></i>
-          <a> For Hire</a>
+          <a href="mailto:coreencooper@pursuit.org" target="_blank" rel="noreferrer"> For Hire</a>
         </li>
       </ul>
     </footer>
