@@ -1,7 +1,27 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
 // import "./Recipes.css";
 
-const Recipes = ({ category, recipes }) => {
-  console.log(recipes)
+const Recipes = ({ category }) => {
+  const [recipes, setRecipes] = useState([]);
+
+  useEffect(() => {
+      const fetchRecipes = async () => {
+    try {
+      const res = await axios.get(
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}&query=${category}&offset=${Math.floor(
+          Math.random() * 300
+        )}&number=1&nutrition=false`
+      );
+      setRecipes(res.data.results);
+    } catch (error) {
+      return error;
+    }
+  };
+
+    fetchRecipes();
+  }, [category])
+
   return (
     <main>
       <h2>List of Recipes from category {category}</h2>

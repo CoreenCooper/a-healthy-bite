@@ -1,12 +1,10 @@
 import { useHistory } from "react-router-dom";
 import "./Home.css";
 
-const Home = ({ setCategory, fetchRecipes }) => {
+const Home = ({ setCategory }) => {
   const history = useHistory();
 
-  // console.log(fetchRecipes)
   const handleSelection = () => {
-    fetchRecipes();
     history.push("/recipes");
   };
 
