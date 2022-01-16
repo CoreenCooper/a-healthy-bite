@@ -1,5 +1,6 @@
 .home-section {
  text-align: center;
+ /* height: 100%; */
 }
 
 .home-main-image {
@@ -10,9 +11,9 @@
 }
 
 .home-category-heading {
-  height: 10vh;
-  padding: 10px;
-  margin: 15px 0;
+  /* height: 10vh; */
+  /* padding: 10px; */
+  margin: 25px 0;
 }
 
 .home-category-heading h1 {
@@ -21,11 +22,8 @@
 }
 
 .home-category-list {
-  height: 30vh;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
-  padding-bottom: 25px;
   justify-content: center;
 }
 

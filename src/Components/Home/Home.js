@@ -9,7 +9,7 @@ const Home = ({ setCategory }) => {
   };
 
   return (
-    <section className="home-section">
+    <main className="home-section">
       <div className="home-main-image"></div>
       <div className="home-category-heading">
         <h1>Recipes by Dietary Category</h1>
@@ -44,14 +44,14 @@ const Home = ({ setCategory }) => {
         </li>
         <li
           className="home-category-list-items"
-          onClick={() => setCategory("Pescetarian")}
+          onClick={() => setCategory("Pescatarian")}
         >
           <img
             className="home-category-images"
             src="https://spoonacular.com/recipeImages/639411-240x150.jpg"
-            alt="Pescetarian"
+            alt="Pescatarian"
           />
-          <button className="home-category-button">Pescetarian</button>
+          <button className="home-category-button">Pescatarian</button>
         </li>
         <li
           className="home-category-list-items"
@@ -66,7 +66,7 @@ const Home = ({ setCategory }) => {
           <button className="home-category-button">Ketogenic</button>
         </li>
       </ul>
-    </section>
+    </main>
   );
 };
 
