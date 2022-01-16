@@ -13,7 +13,7 @@ const NavBar = () => {
         <label htmlFor="nav-input">
           <input name="nav-input" type="text" placeholder="Search Recipes Here" size="30" />
         </label>
-        <button><i class="fas fa-search"></i></button>
+        <button><i className="fas fa-search"></i></button>
       </form>
       <ul className="nav-menu collapsed-nav-menu">
         <NavLink to="/">

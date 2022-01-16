@@ -6,11 +6,11 @@ const Footer = () => {
     <footer>
       <ul className="footer-list">
         <li>
-          <i class="fab fa-github"></i>
+          <i className="fab fa-github"></i>
           <a href="https://github.com/CoreenCooper"> GitHub</a>
         </li>
         <li>
-          <i class="fas fa-envelope"></i>
+          <i className="fas fa-envelope"></i>
           <a href="mailto:coreencooper@pursuit.org" target="_blank" rel="noreferrer"> For Hire</a>
         </li>
       </ul>
