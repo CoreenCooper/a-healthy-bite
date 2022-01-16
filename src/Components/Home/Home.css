@@ -1,6 +1,5 @@
 .home-section {
  text-align: center;
- /* height: 100%; */
 }
 
 .home-main-image {
@@ -11,8 +10,6 @@
 }
 
 .home-category-heading {
-  /* height: 10vh; */
-  /* padding: 10px; */
   margin: 25px 0;
 }
 

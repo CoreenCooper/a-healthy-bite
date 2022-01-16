@@ -20,15 +20,16 @@
 .nav-search-form {
   background-color: rgb(0, 0, 0, .5);
   border-radius: 20px;
-  padding: 3px;
-  border: white solid 2.5px;
-  height: 40px;
+  /* padding: 3px; */
+  border: white solid 2px;
+  /* height: 40px; */
+  width: 325px;
 }
 
 input {
   color: white;
   font-size: 18px;
-  padding: 3px 10px;
+  padding: 0 0 0 2.5px;
   text-align: center;
 }
 
@@ -46,16 +47,17 @@ input:-webkit-autofill:active {
 }
 
 .fa-search {
-  margin: -7px -25px 0 0;
+  /* display: none; */
+  margin-left: 2px;
   border-radius: 0 20px 20px 0;
-  border: white solid 2.5px;
-  padding: 11px;
+  border-left: white solid 2px;
+  padding: 8.5px 12px;
   color: white;
   background-color: olivedrab;
 }
 
 .fa-search:active {
-  transform: scale(0.98);
+  transform: scale(0.99);
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 

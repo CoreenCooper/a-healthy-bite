@@ -10,10 +10,16 @@ const NavBar = () => {
         <h5 className="Subheading">Healthy food for every mood</h5>
       </NavLink>
       <form className="nav-search-form">
-        <label htmlFor="nav-input">
-          <input name="nav-input" type="text" placeholder="Search Recipes Here" size="30" />
-        </label>
-        <button><i className="fas fa-search"></i></button>
+        <label htmlFor="nav-input"></label>
+        <input
+          name="nav-input"
+          type="text"
+          placeholder="Search Recipes Here"
+          size="30"
+        />
+        <button>
+          <i className="fas fa-search"></i>
+        </button>
       </form>
       <ul className="nav-menu collapsed-nav-menu">
         <NavLink to="/">
