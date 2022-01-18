@@ -10,7 +10,6 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: blanchedalmond;
 }
 
 ul,
@@ -24,12 +23,18 @@ input {
   cursor: pointer;
   border: none;
   background: none;
+  text-decoration: none;
   background-color: transparent;
 }
 
 input {
   outline: 0;
 }
+
+i {
+  text-shadow: .5px .5px black;
+}
+
 
 /**************** CSS RESET *******************/
 /* html, body, header, nav, h1, a,

@@ -1,13 +1,22 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import convertSummary from "../../tools/convertSummary";
 import axios from "axios";
-// import "./Recipe.css";
+import "./Recipe.css";
 
 const Recipe = () => {
   const [recipe, setRecipe] = useState({});
   const { title, summary, image, sourceUrl } = recipe;
   const { id } = useParams();
+  const history = useHistory();
+
+  // const goBack = () => {
+  //   history.push("/recipes");
+  // };
+
+  const goBack = () => {
+    history.goBack();
+  };
 
   useEffect(() => {
     const fetchRecipe = async () => {
@@ -24,18 +33,25 @@ const Recipe = () => {
   }, [id]);
 
   return (
-    <main>
-      {/* move to navbar*/}
-      <Link to={`/recipes`}>
-        <button>Back</button>
-      </Link>
-
-      <h2 className="recipe-title">{title}</h2>
-      <p id="summary"> {convertSummary(summary)}</p>
-
-      <img src={image} alt="vegan" className="recipe-image" />
-      <a href={sourceUrl} target="_blank" rel="noreferrer">
-        Click for more information
+    <main className="recipe-main">
+      {/* <Link to={`/recipes`}>
+      <button onClick={goBack}> {"<"} Back</button>
+      </Link> */}
+      <button className="recipe-back-btn" onClick={goBack}>
+        {"<"} Back
+      </button>
+      <section className="recipe-main-section">
+        <h2 className="recipe-main-heading">{title}</h2>
+        <p className="recipe-summary"> {convertSummary(summary)}</p>
+        <img className="recipe-image" src={image} alt="vegan" />
+      </section>
+      <a
+        className="recipe-main-link"
+        href={sourceUrl}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Click for more full instructions
       </a>
     </main>
   );

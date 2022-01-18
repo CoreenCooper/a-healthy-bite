@@ -1,3 +1,7 @@
+footer {
+    width: 100vw;
+}
+
 .footer-list {
     display: flex;
     color: white;
@@ -6,6 +10,12 @@
     background-color: olivedrab;
 }
 
-.footer-list li:hover {
+footer a {
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+footer i:hover, footer a:hover {
     color: black;
+    text-shadow: .5px .5px black;
 }

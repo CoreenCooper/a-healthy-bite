@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
@@ -6,12 +5,22 @@ const Footer = () => {
     <footer>
       <ul className="footer-list">
         <li>
-          <i className="fab fa-github"></i>
-          <a href="https://github.com/CoreenCooper"> GitHub</a>
+          <a
+            href="https://github.com/CoreenCooper"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fab fa-github"></i> GitHub
+          </a>
         </li>
         <li>
-          <i className="fas fa-envelope"></i>
-          <a href="mailto:coreencooper@pursuit.org" target="_blank" rel="noreferrer"> For Hire</a>
+          <a
+            href="mailto:coreencooper@pursuit.org"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fas fa-envelope"></i> For Hire
+          </a>
         </li>
       </ul>
     </footer>

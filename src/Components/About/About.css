@@ -1,0 +1,21 @@
+.about-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 50px;
+    padding: 0 100px;
+    /* border: black solid 1px; */
+}
+
+.about-image {
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 1px gray;
+    margin-right: 50px;
+}
+
+.about-text {
+    /* border: black solid 1px; */
+    padding: 20px;
+}
+

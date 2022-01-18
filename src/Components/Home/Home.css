@@ -6,11 +6,12 @@
   height: 50vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("https://images.unsplash.com/photo-1461988320302-91bde64fc8e4");
+  transform: scaleX(-1);
 }
 
 .home-category-heading {
-  margin: 25px 0;
+  margin: 35px 0;
+  color: #1B2409;
 }
 
 .home-category-heading h1 {
@@ -25,26 +26,33 @@
 }
 
 .home-category-list-items {
+  border-radius: 20px;
   cursor: pointer;
-  margin: 15px 20px;
-  background-color: olivedrab;
+  margin: 15px 30px;
+  background-color: #6b8e23;
   box-shadow: 0 0 5px 1px gray;
-  transition: all .2s ease-in-out;
+  transition: all .6s ease-in-out;
 }
 
 .home-category-list-items:hover {
-  transform: scale(1.25);
+  transform: scale(1.1);
+  box-shadow: 0 0 6px 2px gray;
+  color: black;
 }
 
+.home-category-images {
+  border-radius: 20px 20px 0 0 ;
+}
 .home-category-button {
   margin: auto;
   color: white;
   display: block;
   font-size: 18px;
   padding-bottom: 2%;
+  text-shadow: .5px .5px black;
 }
 
 .home-category-button:hover {
   color: black;
-
+  
 }
