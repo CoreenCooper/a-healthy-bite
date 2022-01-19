@@ -11,19 +11,11 @@ Recipes are generated using the Spoonacular API who's engineers have spent years
 An open collection of high-quality photos.
 
 ## Deployed to Netlify:
-```
-
-https://ahealthybite.netlify.app/
-
-```
+[live site](https://ahealthybite.netlify.app/)
 
 ## First Iteration Contributors:
-Coreen Cooper: Technical Lead,
-Jeffrey Sebastian: Design Lead,
-Jonathan Bedon: Demo Lead,
-Marsha Hall: Scrum Master/Project Manager
-```
-
-https://a-healthy-bite.netlify.app
-
-```
+- Coreen Cooper: Technical Lead
+- Jeffrey Sebastian: Design Lead
+- Jonathan Bedon: Demo Lead
+- Marsha Hall: Scrum Master/Project Manager
+[live site](https://a-healthy-bite.netlify.app/)
