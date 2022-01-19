@@ -1,5 +1,4 @@
-import {useHistory } from "react-router-dom";
-
+import { useHistory } from "react-router-dom";
 const Home = ({ setCategory }) => {
   const history = useHistory();
 
