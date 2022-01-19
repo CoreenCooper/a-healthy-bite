@@ -4,10 +4,10 @@
  A fully responsive app created with React, HTML/CSS that allows users to find healthy recipes based on food categories.
  
 ## API
-[![Spoonacular](https://spoonacular.com/food-api)]
+![Spoonacular](https://spoonacular.com/food-api)
 Recipes are generated using the Spoonacular API who's engineers have spent years crafting a complex food ontology, which allows them to understand the relationships between ingredients, recipes, nutrition, allergens, and more.
 
-[![Unsplash](https://unsplash.com/developers)]
+![Unsplash](https://unsplash.com/developers)
 An open collection of high-quality photos.
 
 ## Deployed to Netlify:
