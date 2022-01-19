@@ -5,7 +5,7 @@ import "./Recipes.css";
 
 const Recipes = ({ category }) => {
   const [recipes, setRecipes] = useState([]);
-
+  category = category || "Vegan";
   const history = useHistory();
 
   const goBack = () => {
@@ -13,7 +13,10 @@ const Recipes = ({ category }) => {
   };
 
   useEffect(() => {
-    const fetchRecipes = async () => {
+    if (sessionStorage[category]) {
+      setRecipes(JSON.parse(sessionStorage[category]));
+    } else { 
+     const fetchRecipes = async () => {
       try {
         const res = await axios.get(
           `https://api.spoonacular.com/recipes/complexSearch?apiKey=${
@@ -23,12 +26,15 @@ const Recipes = ({ category }) => {
           )}&number=12&nutrition=false`
         );
         setRecipes(res.data.results);
+        sessionStorage.setItem(category, JSON.stringify(res.data.results));
       } catch (error) {
         return error;
       }
     };
 
     fetchRecipes();
+  }
+
   }, [category]);
 
   return (
