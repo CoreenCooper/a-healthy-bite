@@ -18,4 +18,5 @@ An open collection of high-quality photos.
 - Jeffrey Sebastian: Design Lead
 - Jonathan Bedon: Demo Lead
 - Marsha Hall: Scrum Master/Project Manager
+
 [live site](https://a-healthy-bite.netlify.app/)
