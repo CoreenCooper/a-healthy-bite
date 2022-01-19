@@ -1,0 +1,21 @@
+footer {
+    width: 100vw;
+}
+
+.footer-list {
+    display: flex;
+    color: white;
+    padding: 4px 0 3px;
+    justify-content: space-around;
+    background-color: olivedrab;
+}
+
+footer a {
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+footer i:hover, footer a:hover {
+    color: black;
+    text-shadow: .5px .5px black;
+}
