@@ -29,4 +29,3 @@ An open collection of high-quality photos.
 - Marsha Hall: Scrum Master/Project Manager
 
 [live site](https://a-healthy-bite.netlify.app/)
->>>>>>> 339b4a3d775cee9bdecbe67c9ef04064e2d61826
