@@ -22,6 +22,9 @@ An open collection of high-quality photos.
 ## Deployed to Netlify:
 [live site](https://ahealthybite.netlify.app/)
 
+## GitPages:
+[GitPages](https://coreencooper.github.io/a-healthy-bite/)
+
 ## First Iteration Contributors:
 - Coreen Cooper: Technical Lead
 - Jeffrey Sebastian: Design Lead
