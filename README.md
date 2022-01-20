@@ -3,6 +3,10 @@
  Wellness through healthy food choices.
  A fully responsive app created with React, HTML/CSS that allows users to find healthy recipes based on food categories.
 
+### Landing page main image sourced from:
+[Unsplash](https://unsplash.com/photos/qo0qBl6T7R8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
+An open collection of high-quality photos.
+
 # Run Application
 - npm install - to install packages
 - npm start - to run server
@@ -15,9 +19,6 @@
 ## API
 [Spoonacular](https://spoonacular.com/food-api)
 Recipes are generated using the Spoonacular API who's engineers have spent years crafting a complex food ontology, which allows them to understand the relationships between ingredients, recipes, nutrition, allergens, and more.
-
-[Unsplash](https://unsplash.com/developers)
-An open collection of high-quality photos.
 
 ## Deployed to Netlify:
 [live site](https://ahealthybite.netlify.app/)
