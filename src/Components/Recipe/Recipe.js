@@ -10,10 +10,6 @@ const Recipe = () => {
   const { id } = useParams();
   const history = useHistory();
 
-  // const goBack = () => {
-  //   history.push("/recipes");
-  // };
-
   const goBack = () => {
     history.goBack();
   };
@@ -34,9 +30,6 @@ const Recipe = () => {
 
   return (
     <main className="recipe-main">
-      {/* <Link to={`/recipes`}>
-      <button onClick={goBack}> {"<"} Back</button>
-      </Link> */}
       <button className="recipe-back-btn" onClick={goBack}>
         {"<"} Back
       </button>
