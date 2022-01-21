@@ -5,7 +5,7 @@ import "./Recipes.css";
 
 const Recipes = ({ category }) => {
   const [recipes, setRecipes] = useState([]);
-  category = category || "Vegan";
+  // category = category || "Vegan";
   const history = useHistory();
 
   const goBack = () => {
