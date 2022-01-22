@@ -44,6 +44,7 @@ const Recipes = () => {
             Math.random() * 300
           )}&number=12&nutrition=false`
         );
+        // debugger;
         setRecipes(res.data.results);
         sessionStorage.setItem(category, JSON.stringify(res.data.results));
         sessionStorage.setItem(searchDateCategory, todaysDate);
@@ -73,7 +74,7 @@ const Recipes = () => {
         {recipes.map((recipe) => {
           return (
             <li className="recipes-list-items" key={recipe.id}>
-              <Link className="recipes-link" to={`/recipes/${recipe.id}`}>
+              <Link className="recipes-link" to={`/recipes/${category}/${recipe.id}`}>
                 <img
                   className="recipes-list-image"
                   src={recipe.image}
