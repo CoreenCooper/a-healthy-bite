@@ -1,22 +1,41 @@
 import { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams, Link } from "react-router-dom";
 import axios from "axios";
 import "./Recipes.css";
 
-const Recipes = ({ category }) => {
+const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
-  // category = category || "Vegan";
+  const { category } = useParams();
+
+  // if (!!category) {
+  //   debugger;
+  //   console.log(category);
+  // }
+
   const history = useHistory();
 
   const goBack = () => {
     history.goBack();
   };
 
+  const getTodaysDate = () => {
+    const today = new Date().toJSON().split("T")[0];
+    return today;
+  };
+
+  /**
+   * @param {string} today
+   * @param {string} savedDate
+   * @returns boolean
+   */
+  const isDateDifferent = (today, savedDate) => {
+    return today !== savedDate;
+  };
+
   useEffect(() => {
-    if (sessionStorage[category]) {
-      setRecipes(JSON.parse(sessionStorage[category]));
-    } else { 
-     const fetchRecipes = async () => {
+    let todaysDate = getTodaysDate();
+    const searchDateCategory = `searchDate_${category}`;
+    const fetchRecipes = async () => {
       try {
         const res = await axios.get(
           `https://api.spoonacular.com/recipes/complexSearch?apiKey=${
@@ -27,14 +46,21 @@ const Recipes = ({ category }) => {
         );
         setRecipes(res.data.results);
         sessionStorage.setItem(category, JSON.stringify(res.data.results));
+        sessionStorage.setItem(searchDateCategory, todaysDate);
       } catch (error) {
         return error;
       }
     };
 
-    fetchRecipes();
-  }
-
+    if (sessionStorage[category] && sessionStorage[searchDateCategory]) {
+      if (isDateDifferent(todaysDate, sessionStorage[searchDateCategory])) {
+        fetchRecipes();
+      } else {
+        setRecipes(JSON.parse(sessionStorage[category]));
+      }
+    } else {
+      fetchRecipes();
+    }
   }, [category]);
 
   return (
@@ -47,14 +73,14 @@ const Recipes = ({ category }) => {
         {recipes.map((recipe) => {
           return (
             <li className="recipes-list-items" key={recipe.id}>
-              <a className="recipes-link" href={`/recipes/${recipe.id}`}>
+              <Link className="recipes-link" to={`/recipes/${recipe.id}`}>
                 <img
                   className="recipes-list-image"
                   src={recipe.image}
                   alt={recipe.title}
                 />
                 <p className="recipes-text">{recipe.title}</p>
-              </a>
+              </Link>
             </li>
           );
         })}

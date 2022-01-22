@@ -19,12 +19,12 @@ function App() {
         <NavBar setSearchResults={setSearchResults} />
         <Switch>
           <Route exact path="/">
-            <Home setCategory={setCategory} />
+            <Home setCategory={setCategory} category={category}/>
           </Route>
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/recipes">
+          <Route exact path="/recipes/:category">
             <Recipes category={category} />
           </Route>
           <Route exact path="/recipes/:id">

@@ -1,4 +1,4 @@
-import me from "../../../src/me.jpg";
+import me from "../../../src/assets/me.jpg";
 import "./About.css";
 
 const About = () => {

@@ -1,4 +1,5 @@
-import { useHistory } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useHistory } from "react-router-dom";
 import homeMainPic from "../../../src/assets/main.jpg";
 import ketogenicPic from "../../../src/assets/ketogenic.jpg";
 import vegetarianPic from "../../../src/assets/vegetarian.jpg";
@@ -6,12 +7,16 @@ import veganPic from "../../../src/assets/vegan.jpg";
 import pescatarianPic from "../../../src/assets/pescatarian.jpg";
 import "./Home.css";
 
-const Home = ({ setCategory }) => {
+const Home = ({ setCategory, category }) => {
   const history = useHistory();
 
-  const handleSelection = () => {
-    history.push("/recipes");
-  };
+  useEffect(() => {
+    const handleSelection = () => {
+      // if (category) {
+      history.push("/recipes/" + category);
+    };
+    // };
+  }, [category]);
 
   return (
     <main className="home-section">
@@ -29,47 +34,52 @@ const Home = ({ setCategory }) => {
       <ul
         className="home-category-list"
         id="category"
-        onClick={handleSelection}
+        // onClick={handleSelection}
       >
-        <li
-          className="home-category-list-items"
-          onClick={() => setCategory("Vegan")}
-        >
-          <img className="home-category-images" src={veganPic} alt="Vegan" />
-          <button className="home-category-button">Vegan</button>
+        <li className="home-category-list-items">
+          <Link onClick={() => setCategory("Vegan")} to="/recipes/vegan">
+            <img className="home-category-images" src={veganPic} alt="Vegan" />
+            <button className="home-category-button">Vegan</button>
+          </Link>
         </li>
         <li
           className="home-category-list-items"
-          onClick={() => setCategory("Vegetarian")}
+          // onClick={() => setCategory("Vegetarian")}
         >
-          <img
-            className="home-category-images"
-            src={vegetarianPic}
-            alt="Vegetarian"
-          />
-          <button className="home-category-button">Vegetarian</button>
+          <Link to="/recipes/vegetarian">
+            <img
+              className="home-category-images"
+              src={vegetarianPic}
+              alt="Vegetarian"
+            />
+            <button className="home-category-button">Vegetarian</button>
+          </Link>
         </li>
         <li
           className="home-category-list-items"
-          onClick={() => setCategory("Pescatarian")}
+          // onClick={() => setCategory("Pescatarian")}
         >
-          <img
-            className="home-category-images"
-            src={pescatarianPic}
-            alt="Pescatarian"
-          />
-          <button className="home-category-button">Pescatarian</button>
+          <Link to="/recipes/pescatarian">
+            <img
+              className="home-category-images"
+              src={pescatarianPic}
+              alt="Pescatarian"
+            />
+            <button className="home-category-button">Pescatarian</button>
+          </Link>
         </li>
         <li
           className="home-category-list-items"
-          onClick={() => setCategory("Ketogenic")}
+          // onClick={() => setCategory("Ketogenic")}
         >
-          <img
-            className="home-category-images"
-            src={ketogenicPic}
-            alt="Ketogenic"
-          />
-          <button className="home-category-button">Ketogenic</button>
+          <Link to="/recipes/Ketogenic">
+            <img
+              className="home-category-images"
+              src={ketogenicPic}
+              alt="Ketogenic"
+            />
+            <button className="home-category-button">Ketogenic</button>
+          </Link>
         </li>
       </ul>
     </main>

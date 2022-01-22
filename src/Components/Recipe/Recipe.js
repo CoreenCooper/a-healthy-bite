@@ -13,6 +13,7 @@ const Recipe = () => {
   // const goBack = () => {
   //   history.push("/recipes");
   // };
+  console.log(id)
 
   const goBack = () => {
     history.goBack();
