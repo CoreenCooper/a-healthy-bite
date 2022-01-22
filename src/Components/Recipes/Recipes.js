@@ -41,10 +41,9 @@ const Recipes = () => {
           `https://api.spoonacular.com/recipes/complexSearch?apiKey=${
             process.env.REACT_APP_SPOONACULAR_API_KEY
           }&query=${category}&offset=${Math.floor(
-            Math.random() * 300
+            Math.random() * 50
           )}&number=12&nutrition=false`
         );
-        // debugger;
         setRecipes(res.data.results);
         sessionStorage.setItem(category, JSON.stringify(res.data.results));
         sessionStorage.setItem(searchDateCategory, todaysDate);

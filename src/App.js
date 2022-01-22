@@ -16,7 +16,7 @@ function App() {
   return (
     <section className="App">
       <Router>
-        <NavBar />
+        <NavBar category={category}/>
         <Switch>
           <Route exact path="/">
             <Home setCategory={setCategory} category={category}/>

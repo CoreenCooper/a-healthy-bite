@@ -7,20 +7,8 @@ import "./Recipe.css";
 const Recipe = () => {
   const [recipe, setRecipe] = useState({});
   const { title, summary, image, sourceUrl } = recipe;
-  const { id, category } = useParams();
+  const { id } = useParams();
   const history = useHistory();
-
-  if (!!recipe) {
-    debugger;
-    console.log(recipe);
-    console.log(category);
-  }
-
-
-  // const goBack = () => {
-  //   history.push("/recipes");
-  // };
-  console.log(id)
 
   const goBack = () => {
     history.goBack();
@@ -32,7 +20,6 @@ const Recipe = () => {
         const res = await axios.get(
           `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}&includeNutrition=false`
         );
-        debugger
         setRecipe(res.data);
       } catch (error) {
         return error;

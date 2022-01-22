@@ -78,6 +78,14 @@ nav a:hover {
   text-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
+nav a.recipe-view {
+  color: #1B2409;
+}
+
+nav a.recipe-view:hover {
+  color: olivedrab;
+}
+
 .nav-bar-collapsed-icon {
   display: none;
 }

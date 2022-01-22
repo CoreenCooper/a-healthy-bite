@@ -2,7 +2,7 @@ import { useHistory } from "react-router-dom";
 // import "./Search.css";
 
 const Search = ({ searchResults }) => {
-console.log(searchResults);
+// console.log(searchResults);
     const history = useHistory();
   
     const goBack = () => {
