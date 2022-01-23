@@ -6,8 +6,7 @@
   padding: 10px 50px 0 50px;
   justify-content: space-between;
   align-items: center;
-  border: black solid 1px;
-  
+  border: var(--pine-tree) solid 1px;
 }
 
 .logo {
@@ -20,7 +19,7 @@
 }
 
 .nav-search-form {
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   border: white solid 2px;
   width: 325px;
@@ -57,7 +56,6 @@ input:-webkit-autofill:active {
 
 .fa-search:active {
   transform: scale(0.99);
-  /* text-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); */
 }
 
 .nav-menu {
@@ -79,7 +77,7 @@ nav a:hover {
 }
 
 nav a.recipe-view {
-  color: #1B2409;
+  color: var(--pine-tree);
 }
 
 nav a.recipe-view:hover {
@@ -97,6 +95,7 @@ nav a.recipe-view:hover {
   .nav-menu {
     display: none;
   }
+
   .nav-menu-active {
     width: 15vw;
     display: flex;

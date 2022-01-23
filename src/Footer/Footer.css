@@ -12,10 +12,12 @@ footer {
 
 footer a {
     color: white;
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px var(--pine-tree);
+    ;
 }
 
 footer i:hover, footer a:hover {
-    color: black;
-    text-shadow: .5px .5px black;
+    color: var(--pine-tree);
+    text-shadow: .5px .5px var(--pine-tree);
+    ;
 }

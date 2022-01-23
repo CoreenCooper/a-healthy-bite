@@ -4,7 +4,6 @@
     align-items: center;
     margin: auto 50px;
     padding: 0 100px;
-    /* border: black solid 1px; */
 }
 
 .about-image {
@@ -15,7 +14,6 @@
 }
 
 .about-text {
-    /* border: black solid 1px; */
     padding: 20px;
 }
 

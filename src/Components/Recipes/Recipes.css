@@ -1,11 +1,11 @@
 .recipes-back-btn {
-  color: #1B2409;
+  color: var(--pine-tree);
   margin-left: 50px;
 }
 
 .recipes-main-heading {
   text-align: center;
-  color: #1B2409;
+  color: var(--pine-tree);
 }
 
 .recipes-main {
@@ -18,7 +18,7 @@
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  /* border: black solid 1px; */
+  /* border: var(--pine-tree) solid 1px; */
 }
 .recipes-list-items {
   box-shadow: 0 0 5px 1px gray;
@@ -36,7 +36,6 @@
 
 .recipes-text {
   color: white;
-  text-shadow: .5px .5px black;
-
+  text-shadow: .5px .5px var(--pine-tree);
 }
 

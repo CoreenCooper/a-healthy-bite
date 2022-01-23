@@ -11,7 +11,7 @@
 
 .home-category-heading {
   margin: 35px 0;
-  color: #1B2409;
+  color: var(--pine-tree);
 }
 
 .home-category-heading h1 {
@@ -37,7 +37,7 @@
 .home-category-list-items:hover {
   transform: scale(1.1);
   box-shadow: 0 0 6px 2px gray;
-  color: black;
+  color: var(--pine-tree);
 }
 
 .home-category-images {
@@ -49,10 +49,9 @@
   display: block;
   font-size: 18px;
   padding-bottom: 2%;
-  text-shadow: .5px .5px black;
+  text-shadow: .5px .5px var(--pine-tree);
 }
 
 .home-category-button:hover {
-  color: black;
-  
+  color: var(--pine-tree);
 }

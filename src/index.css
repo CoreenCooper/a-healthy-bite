@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --pine-tree: #1B2409;
 }
 
 body {
@@ -32,7 +33,7 @@ input {
 }
 
 i {
-  text-shadow: .5px .5px black;
+  text-shadow: .5px .5px var(--pine-tree);
 }
 
 
