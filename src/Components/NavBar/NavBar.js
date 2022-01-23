@@ -4,16 +4,16 @@ import { NavLink, useHistory, useLocation } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = ({ category }) => {
-  const [input, setInput] = useState("");
+  // const [input, setInput] = useState("");
   // const [recipeView, setRecipeView] = useState("");
   const [active, setActive] = useState(false);
-  const history = useHistory();
+  // const history = useHistory();
   const location = useLocation();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    history.push(`/recipes/${input}`);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   history.push(`/recipes/${input}`);
+  // };
 
   // const fetchSearchResults = async (input) => {
   //   try {
@@ -27,31 +27,31 @@ const NavBar = ({ category }) => {
   //   }
   // };
 
-  const handleInput = (e, input) => {
-    setInput(e.target.value);
-    // fetchSearchResults(input);
-  };
+  // const handleInput = (e, input) => {
+  //   setInput(e.target.value);
+  //   // fetchSearchResults(input);
+  // };
 
 
 
   return (
     <nav className="nav-bar">
-      <NavLink to="/" className={`logo ${location.pathname === "/" ? "" : "recipe-view"}`}>
-        <h1 className="logo-title recipe-view">A Healthy Bite</h1>
+      <NavLink to="/" className={`logo ${location.pathname === "/" ? "" : "color-change"}`}>
+        <h1 className="logo-title color-change">A Healthy Bite</h1>
         <h5 className="Subheading">Healthy food for every mood</h5>
       </NavLink>
-      <form onSubmit={handleSubmit} className="nav-search-form">
+      <form className={`nav-search-form ${location.pathname === "/" ? "" : "color-change"}`}>
         <label htmlFor="nav-input"></label>
         <input
-          onChange={handleInput}
-          name="nav-input"
+          // onChange={handleInput}
+          // name="nav-input"
           type="text"
           placeholder="Search Recipes Here"
           size="30"
-          value={input}
+          // value={input}
         />
         <button type="submit">
-          <i className="fas fa-search"></i>
+          <i className={`fas fa-search ${location.pathname === "/" ? "" : "color-change"}`}></i>
         </button>
       </form>
 
@@ -60,13 +60,13 @@ const NavBar = ({ category }) => {
             ? "nav-menu nav-menu-active"
             : "nav-menu"
         }>
-        <NavLink className={`${location.pathname === "/" ? "" : "recipe-view"}`} to="/">
+        <NavLink className={`${location.pathname === "/" ? "" : "color-change"}`} to="/">
           <li>Home</li>
         </NavLink>
-        <NavLink className={`${location.pathname === "/" ? "" : "recipe-view"}`} to="/recipes">
+        <NavLink className={`${location.pathname === "/" ? "" : "color-change"}`} to="">
           <li>Recipes</li>
         </NavLink>
-        <NavLink className={`${location.pathname === "/" ? "" : "recipe-view"}`} to="/about">
+        <NavLink className={`${location.pathname === "/" ? "" : "color-change"}`} to="/about">
           <li>About</li>
         </NavLink>
       </ul>

@@ -11,12 +11,10 @@ const Home = ({ setCategory, category }) => {
   const history = useHistory();
 
   useEffect(() => {
-    const handleSelection = () => {
-      // if (category) {
+    const handleLink = () => {
       history.push("/recipes/" + category);
     };
-    // };
-  }, [category]);
+  }, [category, history]);
 
   return (
     <main className="home-section">
@@ -31,41 +29,37 @@ const Home = ({ setCategory, category }) => {
         <h1>Recipes by Dietary Category</h1>
         <p>Select one to start</p>
       </div>
-      <ul
-        className="home-category-list"
-        id="category"
-        // onClick={handleSelection}
-      >
+      <ul className="home-category-list" id="category">
         <li className="home-category-list-items">
-          <Link onClick={() => setCategory("Vegan")} to="/recipes/vegan">
+          <Link onClick={() => setCategory("Vegan")} to="/recipes/Vegan">
             <img className="home-category-images" src={veganPic} alt="Vegan" />
-            <button className="home-category-button">Vegan</button>
+            <p className="home-category-text">Vegan</p>
           </Link>
         </li>
         <li
           className="home-category-list-items"
           // onClick={() => setCategory("Vegetarian")}
         >
-          <Link to="/recipes/vegetarian">
+          <Link to="/recipes/Vegetarian">
             <img
               className="home-category-images"
               src={vegetarianPic}
               alt="Vegetarian"
             />
-            <button className="home-category-button">Vegetarian</button>
+            <p className="home-category-text">Vegetarian</p>
           </Link>
         </li>
         <li
           className="home-category-list-items"
           // onClick={() => setCategory("Pescatarian")}
         >
-          <Link to="/recipes/pescatarian">
+          <Link to="/recipes/Pescatarian">
             <img
               className="home-category-images"
               src={pescatarianPic}
               alt="Pescatarian"
             />
-            <button className="home-category-button">Pescatarian</button>
+            <p className="home-category-text">Pescatarian</p>
           </Link>
         </li>
         <li
@@ -78,7 +72,7 @@ const Home = ({ setCategory, category }) => {
               src={ketogenicPic}
               alt="Ketogenic"
             />
-            <button className="home-category-button">Ketogenic</button>
+            <p className="home-category-text">Ketogenic</p>
           </Link>
         </li>
       </ul>

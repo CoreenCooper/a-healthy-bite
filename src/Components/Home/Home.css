@@ -43,7 +43,7 @@
 .home-category-images {
   border-radius: 20px 20px 0 0 ;
 }
-.home-category-button {
+.home-category-text {
   margin: auto;
   color: white;
   display: block;
@@ -52,6 +52,6 @@
   text-shadow: .5px .5px var(--pine-tree);
 }
 
-.home-category-button:hover {
+.home-category-text:hover {
   color: var(--pine-tree);
 }
