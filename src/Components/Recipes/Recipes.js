@@ -7,11 +7,6 @@ const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
   const { category } = useParams();
 
-  // if (!!category) {
-  //   debugger;
-  //   console.log(category);
-  // }
-
   const history = useHistory();
 
   const goBack = () => {

@@ -30,9 +30,6 @@ const Recipe = () => {
 
   return (
     <main className="recipe-main">
-      {/* <Link to={`/recipes`}>
-      <button onClick={goBack}> {"<"} Back</button>
-      </Link> */}
       <button className="recipe-back-btn" onClick={goBack}>
         {"<"} Back
       </button>

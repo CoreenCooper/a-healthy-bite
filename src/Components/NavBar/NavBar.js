@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink, useHistory, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 // import axios from "axios";
 import "./NavBar.css";
 
@@ -7,7 +7,6 @@ const NavBar = ({ category }) => {
   // const [input, setInput] = useState("");
   // const [recipeView, setRecipeView] = useState("");
   const [active, setActive] = useState(false);
-  // const history = useHistory();
   const location = useLocation();
 
   // const handleSubmit = (e) => {
