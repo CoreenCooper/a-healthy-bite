@@ -72,8 +72,8 @@ const NavBar = ({ category }) => {
       <div
          className={
           active
-            ? "nav-bar-collapsed-icon-active"
-            : "nav-bar-collapsed-icon"
+            ? "nav-menu-collapsed-icon-active"
+            : "nav-menu-collapsed-icon"
         }
         onClick={() => setActive(!active)}
       >
@@ -82,13 +82,43 @@ const NavBar = ({ category }) => {
       <div
          className={
           active
-            ? "nav-bar-collapsed-icon nav-bar-collapsed-icon-x"
-            : "nav-bar-collapsed-icon-active"
+            ? "nav-menu-close-icon"
+            : "nav-menu-close-icon-active"
         }
         onClick={() => setActive(!active)}
       >
         X
       </div>
+
+      {/* {active ? (
+        <>
+          <div onClick={() => setActive(!active)}>X</div>
+          <div onClick={() => setActive(!active)}>
+            <i className="fas fa-bars"></i>
+          </div>
+        </>
+      ) : (
+        <ul className={active ? "nav-menu nav-menu-active" : "nav-menu"}>
+        <NavLink
+          className={`${location.pathname === "/" ? "" : "color-change"}`}
+          to="/"
+        >
+          <li>Home</li>
+        </NavLink>
+        <NavLink
+          className={`${location.pathname === "/" ? "" : "color-change"}`}
+          to=""
+        >
+          <li>Recipes</li>
+        </NavLink>
+        <NavLink
+          className={`${location.pathname === "/" ? "" : "color-change"}`}
+          to="/about"
+        >
+          <li>About</li>
+        </NavLink>
+      </ul>
+      )} */}
     </nav>
   );
 };
