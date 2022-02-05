@@ -70,10 +70,24 @@ const NavBar = ({ category }) => {
         </NavLink>
       </ul>
       <div
-        className="nav-bar-collapsed-icon"
+         className={
+          active
+            ? "nav-bar-collapsed-icon-active"
+            : "nav-bar-collapsed-icon"
+        }
         onClick={() => setActive(!active)}
       >
         <i className="fas fa-bars"></i>
+      </div>
+      <div
+         className={
+          active
+            ? "nav-bar-collapsed-icon nav-bar-collapsed-icon-x"
+            : "nav-bar-collapsed-icon-active"
+        }
+        onClick={() => setActive(!active)}
+      >
+        X
       </div>
     </nav>
   );
