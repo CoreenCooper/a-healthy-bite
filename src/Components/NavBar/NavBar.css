@@ -4,7 +4,7 @@
   display: flex;
   position: absolute;
   padding: 10px 50px 0 50px;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -15,15 +15,14 @@
 .logo-title {
   font-family: "Kaushan Script", cursive;
   font-size: 32px;
+  width: 200px;
 }
 
 .nav-search-form {
+  display: flex;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   border: white solid 2px;
-  width: 325px;
-  margin-left: 325px;
-
 }
 
 .nav-search-form.color-change {
@@ -73,16 +72,11 @@ input:-webkit-autofill:active {
   color: white;
   align-self: center;
   justify-content: space-between;
-  margin-left: 284px;
-  
 }
 
 .fa-bars, .nav-menu-close-icon-active  {
   display: none;
 }
-/* .nav-menu-close-icon-active {
-  display: none;
-} */
 
 nav a {
   color: white;

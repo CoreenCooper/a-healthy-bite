@@ -1,89 +1,68 @@
 import { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-// import axios from "axios";
+import { NavLink, useLocation, useHistory } from "react-router-dom";
 import "./NavBar.css";
 
-const NavBar = ({ category }) => {
-  // const [input, setInput] = useState("");
-  // const [recipeView, setRecipeView] = useState("");
+const NavBar = () => {
+  const [input, setInput] = useState("");
   const [active, setActive] = useState(false);
   const location = useLocation();
+  const history = useHistory();
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   history.push(`/recipes/${input}`);
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    history.push(`/recipes/${input}`);
+    setInput("")
+  };
 
-  // const fetchSearchResults = async (input) => {
-  //   try {
-  //     const res = await axios.get(
-  //       `https://api.spoonacular.com/recipes/autocomplete?apiKey=0b323f1b126a44ce859b1e08df8a4bd6&number=1&query=${input}`
-  //     );
-      // console.log(res.data);
-      // setSearchResults(res.data.results);
-  //   } catch (error) {
-  //     return error;
-  //   }
-  // };
+  const handleInput = (e) => {
+    setInput(e.target.value);
+  };
 
-  // const handleInput = (e, input) => {
-  //   setInput(e.target.value);
-  //   // fetchSearchResults(input);
-  // };
-
-
+  const changeColor = location.pathname === "/" ? "" : "color-change";
 
   return (
     <nav className="nav-bar">
-      <NavLink to="/" className={`logo ${location.pathname === "/" ? "" : "color-change"}`}>
+      <NavLink to="/" className={`logo ${changeColor}`}>
         <h1 className="logo-title color-change">A Healthy Bite</h1>
         <h5 className="Subheading">Healthy food for every mood</h5>
       </NavLink>
-      <form className={`nav-search-form ${location.pathname === "/" ? "" : "color-change"}`}>
+      <form onSubmit={handleSubmit} className={`nav-search-form ${changeColor}`}>
         <label htmlFor="nav-input"></label>
         <input
-          // onChange={handleInput}
-          // name="nav-input"
+          onChange={handleInput}
+          name="nav-input"
           type="text"
-          placeholder="Search Recipes Here"
+          placeholder="Find Recipes by Ingredient"
           size="30"
-          // value={input}
+          value={input}
         />
         <button type="submit">
-          <i className={`fas fa-search ${location.pathname === "/" ? "" : "color-change"}`}></i>
+          <i className={`fas fa-search ${changeColor}`}></i>
         </button>
       </form>
 
-      <ul className={
-          active
-            ? "nav-menu nav-menu-active"
-            : "nav-menu"
-        }>
-        <NavLink className={`${location.pathname === "/" ? "" : "color-change"}`} to="/">
+      <ul className={active ? "nav-menu nav-menu-active" : "nav-menu"}>
+        <NavLink className={`${changeColor}`} to="/">
           <li>Home</li>
         </NavLink>
-        <NavLink className={`${location.pathname === "/" ? "" : "color-change"}`} to="">
+        <NavLink className={`${changeColor}`} to="">
           <li>Recipes</li>
         </NavLink>
-        <NavLink className={`${location.pathname === "/" ? "" : "color-change"}`} to="/about">
+        <NavLink className={`${changeColor}`} to="/about">
           <li>About</li>
         </NavLink>
       </ul>
       <div
-         className={
-          active
-            ? "nav-menu-collapsed-icon-active"
-            : "nav-menu-collapsed-icon"
+        className={
+          active ? "nav-menu-collapsed-icon-active" : "nav-menu-collapsed-icon"
         }
         onClick={() => setActive(!active)}
       >
         <i className="fas fa-bars"></i>
       </div>
       <div
-         className={
-          active
-            ? "nav-menu-close-icon"
-            : "nav-menu-close-icon-active"
+        className={
+          active ? "nav-menu-close-icon" : "nav-menu-close-icon-active"
         }
         onClick={() => setActive(!active)}
       >
