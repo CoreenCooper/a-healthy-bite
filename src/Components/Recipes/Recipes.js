@@ -63,7 +63,7 @@ const Recipes = () => {
       <button className="recipes-back-btn" onClick={goBack}>
         {"<"} Back
       </button>
-      <h2 className="recipes-main-heading">{category} Dishes</h2>
+      <h2 className="recipes-main-heading">{category[0].toUpperCase() + category.slice(1)} Dishes</h2>
       <ul className="recipes-list">
         {recipes.map((recipe) => {
           return (
