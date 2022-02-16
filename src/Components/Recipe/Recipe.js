@@ -6,8 +6,8 @@ import "./Recipe.css";
 
 const Recipe = () => {
   const [recipe, setRecipe] = useState({});
+  const [steps, setSteps] = useState([]);
   const { title, summary, instructions, image, sourceUrl, servings, readyInMinutes, sourceName, analyzedInstructions, extendedIngredients } = recipe;
-  // const {steps} = analyzedInstructions[0];
   const { id } = useParams();
   const history = useHistory();
 
@@ -27,7 +27,9 @@ const Recipe = () => {
         const res = await axios.get(
           `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}&includeNutrition=false`
         );
+        // console.log(res.data.analyzedInstructions[0])
         setRecipe(res.data);
+        setSteps(res.data.analyzedInstructions[0].steps);
       } catch (error) {
         return error;
       }
@@ -44,30 +46,32 @@ const Recipe = () => {
       <section className="recipe-main-section">
         <h2 className="recipe-main-heading">{title}</h2>
         <img className="recipe-image" src={image} alt="vegan" />
-        {/* unable to key into analyzedInstructions[0]. recieve an error */}
-        {/* <p>{analyzedInstructions[0]}</p> */}
-        {/* <ol>{analyzedInstructions[0].steps.map((step) => {
-          <li>step</li>
-        })}</ol> */}
         <p className="recipe-serving-size">Serving size: {servings}</p>
         <p className="recipe-prep-time">Preparation time: {readyInMinutes}</p>
-            <ul className="ingredient-list">
-        {extendedIngredients.map((ingredient) => {
+        {/* <ul className="ingredient-list">
+          {extendedIngredients.map((ingredient) => {
+            // const {name, measures} = ingredient;
+            return (
+              <li className="ingredient" key={ingredient.name}>
+                <p className="ingredient-amount">{Math.ceil(ingredient.measures.us.amount)}</p>
+                <p className="ingredient-unit">{ingredient.measures.us.unitShort}</p>
+                <p className="ingredient-name">{ingredient.name}</p>
+              </li>
+          )
+          })}
+        </ul> */}
+        <div className="recipe-instructions" >
+        <ol>
+        {steps.map((stepObj) => {
           return (
-            <li className="ingredient">
-            <p className="ingredient-amount">{ingredient.measures.us.amount}</p>
-            <p className="ingredient-unit">{ingredient.measures.us.unitShort}</p>
-            <p className="ingredient-name">{ingredient.nameClean}</p>
-            </li>
+            <li key={stepObj.number}>{stepObj.step}</li>
           )
         })}
-            </ul>
-        <div className="recipe-instructions" dangerouslySetInnerHTML = {{__html: instructions}}></div>
+        </ol>
+        </div>
+        {/* <div className="recipe-instructions" dangerouslySetInnerHTML = {{__html: instructions}}></div> */}
         {/* <p className="recipe-summary"> {convertSummary(summary)}</p> */}
-        {/* <p className="recipe-instructions"> {convertSummary(instructions)}</p> */}
-        {/* <ul className="analyzedInstructions">{analyzedInstructions.map((instructions) => {
 
-        })}</ul> */}
       </section>
       <a
         className="recipe-main-link"
