@@ -6,7 +6,8 @@ import "./Recipe.css";
 
 const Recipe = () => {
   const [recipe, setRecipe] = useState({});
-  const { title, summary, image, sourceUrl } = recipe;
+  const { title, summary, instructions, image, sourceUrl, servings, readyInMinutes, sourceName, analyzedInstructions, extendedIngredients } = recipe;
+  // const {steps} = analyzedInstructions[0];
   const { id } = useParams();
   const history = useHistory();
 
@@ -14,6 +15,12 @@ const Recipe = () => {
     history.goBack();
   };
 
+// console.log(steps)
+  // console.log(recipe)
+  // console.log(analyzedInstructions[0].steps)
+  // console.log(analyzedInstructions[0].steps[0].number)
+  // console.log(analyzedInstructions[0].steps[0].step)
+  
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
@@ -27,6 +34,7 @@ const Recipe = () => {
     };
     fetchRecipe();
   }, [id]);
+  
 
   return (
     <main className="recipe-main">
@@ -35,8 +43,31 @@ const Recipe = () => {
       </button>
       <section className="recipe-main-section">
         <h2 className="recipe-main-heading">{title}</h2>
-        <p className="recipe-summary"> {convertSummary(summary)}</p>
         <img className="recipe-image" src={image} alt="vegan" />
+        {/* unable to key into analyzedInstructions[0]. recieve an error */}
+        {/* <p>{analyzedInstructions[0]}</p> */}
+        {/* <ol>{analyzedInstructions[0].steps.map((step) => {
+          <li>step</li>
+        })}</ol> */}
+        <p className="recipe-serving-size">Serving size: {servings}</p>
+        <p className="recipe-prep-time">Preparation time: {readyInMinutes}</p>
+            <ul className="ingredient-list">
+        {extendedIngredients.map((ingredient) => {
+          return (
+            <li className="ingredient">
+            <p className="ingredient-amount">{ingredient.measures.us.amount}</p>
+            <p className="ingredient-unit">{ingredient.measures.us.unitShort}</p>
+            <p className="ingredient-name">{ingredient.nameClean}</p>
+            </li>
+          )
+        })}
+            </ul>
+        <div className="recipe-instructions" dangerouslySetInnerHTML = {{__html: instructions}}></div>
+        {/* <p className="recipe-summary"> {convertSummary(summary)}</p> */}
+        {/* <p className="recipe-instructions"> {convertSummary(instructions)}</p> */}
+        {/* <ul className="analyzedInstructions">{analyzedInstructions.map((instructions) => {
+
+        })}</ul> */}
       </section>
       <a
         className="recipe-main-link"
@@ -44,7 +75,7 @@ const Recipe = () => {
         target="_blank"
         rel="noreferrer"
       >
-        Click for more full instructions
+        Sourced from {sourceName}
       </a>
     </main>
   );

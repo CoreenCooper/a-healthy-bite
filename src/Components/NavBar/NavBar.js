@@ -32,7 +32,7 @@ const NavBar = () => {
           onChange={handleInput}
           name="nav-input"
           type="text"
-          placeholder="Find Recipes by Ingredient"
+          placeholder="Search by Ingredient"
           size="30"
           value={input}
         />

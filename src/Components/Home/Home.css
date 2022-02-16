@@ -10,12 +10,12 @@
 }
 
 .home-category-heading {
-  margin: 35px 0;
+  margin: 15px 0;
   color: var(--pine-tree);
 }
 
 .home-category-heading h1 {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
 }
 
