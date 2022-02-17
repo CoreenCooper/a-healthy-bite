@@ -1,22 +1,23 @@
 import { useState } from "react";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
+import Search from "../Search/Search";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const [input, setInput] = useState("");
+  // const [input, setInput] = useState("");
   const [active, setActive] = useState(false);
   const location = useLocation();
   const history = useHistory();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    history.push(`/recipes/${input}`);
-    setInput("")
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   history.push(`/recipes/${input}`);
+  //   setInput("")
+  // };
 
-  const handleInput = (e) => {
-    setInput(e.target.value);
-  };
+  // const handleInput = (e) => {
+  //   setInput(e.target.value);
+  // };
 
   const changeColor = location.pathname === "/" ? "" : "color-change";
 
@@ -26,7 +27,7 @@ const NavBar = () => {
         <h1 className="logo-title color-change">A Healthy Bite</h1>
         <h5 className="Subheading">Healthy food for every mood</h5>
       </NavLink>
-      <form onSubmit={handleSubmit} className={`nav-search-form ${changeColor}`}>
+      {/* <form onSubmit={handleSubmit} className={`nav-search-form ${changeColor}`}>
         <label htmlFor="nav-input"></label>
         <input
           onChange={handleInput}
@@ -39,8 +40,8 @@ const NavBar = () => {
         <button type="submit">
           <i className={`fas fa-search ${changeColor}`}></i>
         </button>
-      </form>
-
+      </form> */}
+      <Search />
       <ul className={active ? "nav-menu nav-menu-active" : "nav-menu"}>
         <NavLink className={`${changeColor}`} to="/">
           <li>Home</li>
