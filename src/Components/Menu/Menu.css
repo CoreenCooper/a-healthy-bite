@@ -1,0 +1,31 @@
+.nav-menu {
+    width: 100vw;
+    display: flex;
+    margin-top: 20px;
+    color: white;
+    align-self: center;
+    justify-content: space-around;
+  }
+  
+  .fa-bars, .nav-menu-close-icon-active  {
+    display: none;
+  }
+  
+  nav a {
+    color: white;
+  }
+  
+  nav a:hover {
+    color: olivedrab;
+    transform: scale(0.99);
+    text-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  }
+  
+  nav a.color-change {
+    color: var(--pine-tree);
+  }
+  
+  nav a.color-change:hover {
+    color: olivedrab;
+  }
+  

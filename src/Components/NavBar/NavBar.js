@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
 import Search from "../Search/Search";
+import Menu from "../Menu/Menu";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -42,7 +43,8 @@ const NavBar = () => {
         </button>
       </form> */}
       <Search />
-      <ul className={active ? "nav-menu nav-menu-active" : "nav-menu"}>
+      <Menu />
+      {/* <ul className={active ? "nav-menu nav-menu-active" : "nav-menu"}>
         <NavLink className={`${changeColor}`} to="/">
           <li>Home</li>
         </NavLink>
@@ -68,7 +70,7 @@ const NavBar = () => {
         onClick={() => setActive(!active)}
       >
         X
-      </div>
+      </div> */}
 
       {/* {active ? (
         <>
