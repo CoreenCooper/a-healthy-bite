@@ -8,7 +8,7 @@ const Search = ({ searchResults }) => {
     const goBack = () => {
       history.goBack();
     };
-  
+  // https://api.spoonacular.com/recipes/autocomplete?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}&query=${input}&number=1
   return (
     <main className="Search-main">
       <button className="back-btn" onClick={goBack}>Back</button>
