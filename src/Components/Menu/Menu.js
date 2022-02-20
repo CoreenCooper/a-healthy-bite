@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
-// import Search from "../Search/Search";
 import "../Menu/Menu.css";
 
 const Menu = () => {
-  // const [input, setInput] = useState("");
   const [active, setActive] = useState(false);
   const location = useLocation();
   const history = useHistory();
 
   const changeColor = location.pathname === "/" ? "" : "color-change";
+
+  
 
   return (
       <>
