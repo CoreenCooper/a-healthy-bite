@@ -2,8 +2,10 @@
     display: flex;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    margin-top: 160px;
+    margin: auto;
     border: white solid 2px;
+    height: 35px;
+    width: 300px;
   }
   
   .nav-search-form.color-change {
@@ -14,8 +16,8 @@
   input {
     color: white;
     font-size: 14px;
-    /* padding: 0 0 0 2.5px; */
     text-align: center;
+    width: 300px;
   }
   
   input:-webkit-autofill,
@@ -31,7 +33,6 @@
   }
   
   .fa-search {
-    margin-left: 2px;
     border-radius: 0 20px 20px 0;
     border-left: white solid 2px;
     padding: 8.5px 12px;

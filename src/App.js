@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useState } from "react";
-import Home from "./Components/Home/Home.js";
+import Home from "./Pages/Home/Home.js";
 import About from "./Components/About/About.js";
-import NavBar from "./Components/NavBar/NavBar.js";
+import NavBar from "./Pages/NavBar/NavBar.js";
 import Recipe from "./Components/Recipe/Recipe.js";
-import Footer from "./Components/Footer/Footer.js";
+import Footer from "./Pages/Footer/Footer.js";
 import Recipes from "./Components/Recipes/Recipes.js";
 import "./App.css";
 
