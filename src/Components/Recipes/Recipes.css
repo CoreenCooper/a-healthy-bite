@@ -1,11 +1,11 @@
 .recipes-back-btn {
   color: var(--pine-tree);
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
 .recipes-main-heading {
   text-align: center;
-  margin-bottom: 10px;
+  margin-top: 10px;
   color: var(--pine-tree);
 }
 

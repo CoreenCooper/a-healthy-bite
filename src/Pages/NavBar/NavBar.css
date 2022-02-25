@@ -3,7 +3,6 @@
   width: 100vw;
   display: flex;
   position: absolute;
-  padding: 10px 15px;
 }
 
 .logo {
@@ -12,7 +11,6 @@
 
 .logo-title {
   font-family: "Kaushan Script", cursive;
-  font-size: 32px;
 }
 
 .nav-search-form {
@@ -21,7 +19,6 @@
   border-radius: 20px;
   margin: auto;
   border: white solid 2px;
-  height: 35px;
 }
 
 .nav-search-form.color-change {
@@ -31,9 +28,7 @@
 
 input {
   color: white;
-  font-size: 14px;
   text-align: center;
-  width: 300px;
 }
 
 input:-webkit-autofill,
@@ -51,7 +46,6 @@ input:-webkit-autofill:active {
 .fa-search {
   border-radius: 0 20px 20px 0;
   border-left: white solid 2px;
-  padding: 8.5px 12px;
   color: white;
   background-color: olivedrab;
 }
@@ -65,12 +59,16 @@ input:-webkit-autofill:active {
 }
 
 .nav-menu {
+  display: none;
+}
+
+/* .nav-menu {
   width: 189px;
   display: flex;
   margin-top: 20px;
   color: white;
   justify-content: space-around;
-}
+} */
 
 nav a {
   color: white;
@@ -89,46 +87,78 @@ nav a.color-change {
 nav a.color-change:hover {
   color: olivedrab;
 }
+
+.color-change .fa-bars,
+.color-change .nav-menu-close-icon-active,
+.color-change .nav-menu-close-icon {
+  color: var(--pine-tree);
+}
 /* //////////////////////////////////////////////////////// */
 @media (min-width: 280px) {
   .nav-bar {
-    flex-direction: column;
-    width: 100vw;
     padding: 10px 15px 0 15px;
+    flex-wrap: wrap;
   }
-  
-  .nav-menu {
-    margin-top: 30px;
-    order: 2;
-    align-self: center;
-  }
+
   .logo {
     order: 0;
+    width: 150px;
+    margin-left: 50px;
+  }
+
+  .logo-title {
+    width: 150px;
+    font-size: 24px;
   }
 
   .Subheading {
-    display: none;
+    font-size: 10px;
+    /* width: 150px; */
   }
 
   /* Rethink search bar placement in recipes index */
   .nav-search-form {
-    order: 1;
-    margin-top: 165px;
-    width: 250px;
+    margin-top: 10px;
+  }
+
+  /* Rethink search bar placement in recipes index */
+  .nav-search-form {
+    margin-top: 10px;
+    order: 2;
+    width: 190px;
   }
 
   .fa-search {
-    padding: 8.5px 12px;
+    padding: 6px 10px;
   }
 
   input {
-    width: 207px;
+    width: 150px;
+    /* height: ; */
+    font-size: 12px;
   }
 
-  .fa-bars, .nav-menu-close-icon-active {
+  /* Switch between the bars and X. Merge styling after fixing JSX */
+  .fa-bars {
+    order: 1;
+    display: block;
+    /* display: none; */
+    margin: 10px 0 0 35px;
+    color: white;
+  }
+
+  .nav-menu-close-icon-active,
+  .nav-menu-close-icon {
     display: none;
+    /* display: block; */
+    margin: 10px 0 0 35px;
+    color: white;
   }
 
+  .fa-bars:hover,
+  .nav-menu-close-icon-active:hover {
+    color: olivedrab;
+  }
 }
 /* //////////////////////////////////////////////////////// */
 @media (min-width: 360px) {
@@ -139,7 +169,7 @@ nav a.color-change:hover {
     padding: 15px 15px 0 15px;
     column-gap: 10px;
   }
-  
+
   .logo {
     order: 0;
     width: 270px;
@@ -148,28 +178,28 @@ nav a.color-change:hover {
   .Subheading {
     display: none;
   }
-  
+
   /* Rethink search bar placement in recipes index */
   .nav-search-form {
     order: 1;
     margin-top: 260px;
     width: 250px;
   }
-  
+
   .fa-search {
     padding: 8.5px 12px;
   }
-  
+
   input {
     width: 207px;
   }
-  
+
   .nav-menu {
     display: none;
   }
 
   /* Switch between the bars and X. Merge styling after fixing JSX */
-  .nav-menu-close-icon-active  {
+  .nav-menu-close-icon-active {
     /* display: block; */
     display: none;
     margin: 10px 0 0 10px;
@@ -183,17 +213,17 @@ nav a.color-change:hover {
     margin: 15px 0 0 29px;
   }
 
-  .fa-bars, .nav-menu-close-icon-active  {
+  .fa-bars,
+  .nav-menu-close-icon-active {
     color: white;
   }
-
 }
 /* //////////////////////////////////////////////////////// */
 @media (min-width: 375px) {
   .nav-bar {
     padding: 10px 15px 0 15px;
   }
-  
+
   .logo {
     order: 0;
     width: 300px;
@@ -209,7 +239,7 @@ nav a.color-change:hover {
   }
 
   /* Switch between the bars and X. Merge styling after fixing JSX */
-  .nav-menu-close-icon-active  {
+  .nav-menu-close-icon-active {
     /* display: block; */
     display: none;
     margin-left: 10px;
@@ -230,7 +260,7 @@ nav a.color-change:hover {
   }
 
   /* Switch between the bars and X. Merge styling after fixing JSX */
-  .nav-menu-close-icon-active  {
+  .nav-menu-close-icon-active {
     /* display: block; */
     display: none;
   }
@@ -240,7 +270,8 @@ nav a.color-change:hover {
     /* display: none; */
   }
 
-  .fa-bars, .nav-menu-close-icon-active  {
+  .fa-bars,
+  .nav-menu-close-icon-active {
     margin-left: 20px;
   }
 }
@@ -250,14 +281,14 @@ nav a.color-change:hover {
   .logo {
     width: 338px;
   }
-  
+
   /* Rethink search bar placement in recipes index */
   .nav-search-form {
     margin-top: 318px;
   }
 
   /* Switch between the bars and X. Merge styling after fixing JSX */
-  .nav-menu-close-icon-active  {
+  .nav-menu-close-icon-active {
     /* display: block; */
     display: none;
   }
@@ -267,7 +298,8 @@ nav a.color-change:hover {
     /* display: none; */
   }
 
-  .fa-bars, .nav-menu-close-icon-active  {
+  .fa-bars,
+  .nav-menu-close-icon-active {
     margin-left: 0;
   }
 }
@@ -284,14 +316,14 @@ nav a.color-change:hover {
   .Subheading {
     font-size: 12px;
   }
-  
+
   /* Rethink search bar placement in recipes index */
   .nav-search-form {
     margin-top: 247px;
   }
 
   /* Switch between the bars and X. Merge styling after fixing JSX */
-  .nav-menu-close-icon-active  {
+  .nav-menu-close-icon-active {
     /* display: block; */
     display: none;
   }
@@ -301,7 +333,8 @@ nav a.color-change:hover {
     /* display: none; */
   }
 
-  .fa-bars, .nav-menu-close-icon-active  {
+  .fa-bars,
+  .nav-menu-close-icon-active {
     margin-left: 260px;
   }
 }
@@ -321,11 +354,11 @@ nav a.color-change:hover {
     margin-top: 20px;
     width: 280px;
   }
-  
+
   .fa-search {
     padding: 8.5px 12px;
   }
-  
+
   input {
     width: 235px;
   }
@@ -349,7 +382,7 @@ nav a.color-change:hover {
     order: 1;
     width: 300px;
   }
-  
+
   input {
     width: 300px;
   }
@@ -361,15 +394,14 @@ nav a.color-change:hover {
     padding: 20px 40px;
     column-gap: 100px;
   }
-  
+
   /* center search bar and page heading */
   .nav-search-form {
     order: 1;
     width: 350px;
   }
-  
+
   input {
     width: 310px;
   }
-  
 }

@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { NavLink, useLocation, useHistory } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "../Menu/Menu.css";
 
 const Menu = () => {
   const [active, setActive] = useState(false);
   const location = useLocation();
-  const history = useHistory();
+  // const history = useHistory();
 
   const changeColor = location.pathname === "/" ? "" : "color-change";
+  const changeMenu = active ? "nav-menu-collapsed-icon-active" : "nav-menu-collapsed-icon";
 
   
 
@@ -27,7 +28,7 @@ const Menu = () => {
 
       <div
         className={
-          active ? "nav-menu-collapsed-icon-active" : "nav-menu-collapsed-icon"
+          `${changeMenu} ${changeColor}`
         }
         onClick={() => setActive(!active)}>
         <i className="fas fa-bars"></i>
