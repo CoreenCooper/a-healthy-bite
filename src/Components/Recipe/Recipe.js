@@ -36,7 +36,7 @@ const Recipe = () => {
 
   return (
     <main className="recipe-main">
-      <button className="recipe-back-btn back-btn" onClick={goBack}>
+      <button className="back-btn" onClick={goBack}>
         {"<"} Back
       </button>
 
@@ -57,10 +57,10 @@ const Recipe = () => {
             )
           })}
         </ol>
-        <ol className="recipe-instructions">
+        <ol>
           {steps.map((stepObj) => {
             return (
-              <li key={stepObj.number}>{stepObj.step}</li>
+              <li className="recipe-instructions" key={stepObj.number}>{stepObj.step}</li>
             )
           })}
         </ol>
