@@ -1,57 +1,70 @@
-.home-section {
- text-align: center;
+@media (min-width: 280px) {
+  .home-section {
+    text-align: center;
+  }
+
+  .home-main-image {
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+  }
+
+  .home-category-heading {
+    margin: 15px 0;
+    color: var(--pine-tree);
+  }
+
+  .home-category-heading h1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .home-category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home-category-list-items {
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 15px 30px;
+    background-color: #6b8e23;
+    box-shadow: 0 0 5px 1px gray;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .home-category-list-items:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 6px 2px gray;
+    color: var(--pine-tree);
+  }
+
+  .home-category-images {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .home-category-text {
+    margin: auto;
+    color: white;
+    display: block;
+    font-size: 18px;
+    padding-bottom: 2%;
+    text-shadow: 0.5px 0.5px var(--pine-tree);
+  }
+
+  .home-category-text:hover {
+    color: var(--pine-tree);
+  }
 }
 
-.home-main-image {
-  height: 50vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transform: scaleX(-1);
-}
+@media (min-width: 360px) {
+  .home-category-heading h1 {
+    font-size: 24px;
+  }
 
-.home-category-heading {
-  margin: 15px 0;
-  color: var(--pine-tree);
-}
-
-.home-category-heading h1 {
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.home-category-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.home-category-list-items {
-  border-radius: 20px;
-  cursor: pointer;
-  margin: 15px 30px;
-  background-color: #6b8e23;
-  box-shadow: 0 0 5px 1px gray;
-  transition: all .6s ease-in-out;
-}
-
-.home-category-list-items:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 6px 2px gray;
-  color: var(--pine-tree);
-}
-
-.home-category-images {
-  border-radius: 20px 20px 0 0 ;
-}
-.home-category-text {
-  margin: auto;
-  color: white;
-  display: block;
-  font-size: 18px;
-  padding-bottom: 2%;
-  text-shadow: .5px .5px var(--pine-tree);
-}
-
-.home-category-text:hover {
-  color: var(--pine-tree);
+  .home-category-images {
+    width: 300px;
+  }
 }

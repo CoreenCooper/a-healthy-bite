@@ -1,71 +1,87 @@
-.recipe-main {
-  margin-top: 100px;
-  /* margin: 100px 10px 0 10px; */
-}
+@media (min-width: 280px) {
+  .recipe-main {
+    margin-top: 100px;
+    /* margin: 100px 10px 0 10px; */
+  }
 
-/* .recipe-back-btn {
+  /* .recipe-back-btn {
   color: var(--pine-tree);
   margin-left: 50px;
 } */
 
-.recipe-main-section {
-  color: var(--pine-tree);
-  display: flex;
-  flex-direction: column;
-  /* margin: 0 200px; */
-  /* width: 240px; */
-  padding: 10px;
-}
+  .recipe-main-section {
+    color: var(--pine-tree);
+    display: flex;
+    flex-direction: column;
+    /* margin: 0 200px; */
+    /* width: 240px; */
+    padding: 10px;
+  }
 
-.recipe-main-heading {
-  padding-bottom: 7px;
-  text-align: center;
-  color: var(--pine-tree);
-  font-size: 16px;
-  /* width: 300px; */
-}
+  .recipe-main-heading {
+    padding-bottom: 7px;
+    text-align: center;
+    color: var(--pine-tree);
+    font-size: 16px;
+    /* width: 300px; */
+  }
 
-.recipe-image {
-  width: 250px;
-  border-radius: 20px;
-  box-shadow: 0 0 5px 1px gray;
-  margin-bottom: 10px;
-  align-self: center;
-}
+  .recipe-image {
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 1px gray;
+    margin-bottom: 10px;
+    align-self: center;
+  }
 
-/* .recipe-serving-size {
+  /* .recipe-serving-size {
   margin-left: 48px;
 } */
 
-.recipe-serving-size, .recipe-prep-time {
-  margin-left: 100px;
+  .recipe-serving-size,
+  .recipe-prep-time {
+    margin-left: 100px;
+  }
+
+  .recipe-ingredients-heading {
+    padding: 5px;
+  }
+
+  .recipe-ingredient-list {
+    padding-bottom: 10px;
+  }
+
+  .recipe-ingredient {
+    display: flex;
+  }
+
+  .recipe-ingredient-name {
+    margin-left: 3px;
+  }
+
+  .recipe-ingredient-unit {
+    margin-left: 3px;
+  }
+
+  .recipe-main-link {
+    padding-top: 10px;
+    color: var(--pine-tree);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 900;
+  }
 }
 
-.recipe-ingredients-heading {
-  padding: 5px;
-}
+@media (min-width: 360px) {
 
-.recipe-ingredient-list {
-  padding-bottom: 10px;
-}
+  .recipe-image {
+    width: 325px;
+  }
 
-.recipe-ingredient {
-  display: flex;  
-}
+  .recipe-serving-size,
+  .recipe-prep-time {
+    margin-left: 170px;
+  }
 
-.recipe-ingredient-name {
-  margin-left: 3px;
-}
-
-.recipe-ingredient-unit {
-  margin-left:  3px;
-}
-
-.recipe-main-link {
-  padding-top: 10px;
-  color: var(--pine-tree);
-  display: flex;
-  flex-direction: column;
-  align-items: center;  
-  font-weight: 900;
 }

@@ -21,11 +21,6 @@
   border: white solid 2px;
 }
 
-.nav-search-form.color-change {
-  background-color: rgba(0, 0, 0, 0.25);
-  border: var(--pine-tree) solid 2px;
-}
-
 input {
   color: white;
   text-align: center;
@@ -115,18 +110,20 @@ nav a.color-change:hover {
     font-size: 14px;
     /* width: 150px; */
   }
-
+  
   /* Rethink search bar placement in recipes index */
   .nav-search-form {
     margin-top: 10px;
-  }
-
-  /* Rethink search bar placement in recipes index */
-  .nav-search-form {
-    margin-top: 10px;
-    order: 2;
+    order: 1;
+    margin-top: 215px;
     width: 190px;
   }
+
+  .nav-search-form.color-change {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: var(--pine-tree) solid 2px;
+  margin: 10px 0 0 40px;
+}
 
   .fa-search {
     padding: 6px 10px;
@@ -172,7 +169,13 @@ nav a.color-change:hover {
 
   .logo {
     order: 0;
-    width: 270px;
+    width: 200px;
+    margin-left: 50px;
+  }
+
+  .logo-title {
+    width: 220px;
+    font-size: 30px;
   }
 
   .Subheading {
@@ -182,7 +185,7 @@ nav a.color-change:hover {
   /* Rethink search bar placement in recipes index */
   .nav-search-form {
     order: 1;
-    margin-top: 260px;
+    margin-top: 263px;
     width: 250px;
   }
 
@@ -192,7 +195,9 @@ nav a.color-change:hover {
 
   input {
     width: 207px;
+    font-size: 14px;
   }
+  
 
   .nav-menu {
     display: none;
@@ -210,7 +215,7 @@ nav a.color-change:hover {
     display: block;
     /* display: none; */
     font-size: 24px;
-    margin: 15px 0 0 29px;
+    margin: 10px 0 0 48px;
   }
 
   .fa-bars,
