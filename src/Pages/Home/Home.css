@@ -80,3 +80,25 @@
     width: 100vw;
   }
 }
+
+@media (min-width: 1024px) {
+  .home-category-list-items {
+    width: 200px;
+    margin: 10px 10px;
+  }
+
+  .home-category-images {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .home-category-list-items {
+    width: 290px;
+    margin: 10px 10px;
+  }
+
+  .home-category-images {
+    width: 290px;
+  }
+}

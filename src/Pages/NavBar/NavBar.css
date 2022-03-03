@@ -411,9 +411,10 @@ nav a.color-change:hover {
 /* ////////////////////////////////////////////////////// */
 @media (min-width: 1024px) {
   /* center search bar and page heading */
-  .nav-search-form {
+  .nav-search-form, .nav-search-form.color-change {
     order: 1;
     width: 300px;
+    margin-right: 80px;
   }
 
   input {
@@ -425,14 +426,15 @@ nav a.color-change:hover {
 @media (min-width: 1280px) {
   .nav-bar {
     padding: 20px 40px;
-    column-gap: 100px;
+    /* column-gap: 100px; */
   }
   
 
   /* center search bar and page heading */
-  .nav-search-form {
+  .nav-search-form, .nav-search-form.color-change {
     order: 1;
     width: 350px;
+    margin-right: 120px;
   }
 
   input {

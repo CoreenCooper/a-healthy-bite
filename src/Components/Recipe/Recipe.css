@@ -108,7 +108,7 @@
   .recipe-prep-time {
     margin-left: 400px;
   }
-  
+
   .recipe-ingredients-heading {
     margin-top: 50px;
    }
@@ -118,5 +118,19 @@
   .recipe-serving-size,
   .recipe-prep-time {
     margin-left: 450px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .recipe-serving-size,
+  .recipe-prep-time {
+    margin-left: 500px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .recipe-serving-size,
+  .recipe-prep-time {
+    margin-left: 630px;
   }
 }
