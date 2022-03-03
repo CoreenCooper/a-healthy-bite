@@ -70,10 +70,6 @@
 }
 
 @media (min-width: 540px) {
-  .home-section {
-    margin-right: 90px;
-  }
-
   .home-main-image {
     width: 100vw;
   }

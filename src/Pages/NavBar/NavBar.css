@@ -312,17 +312,21 @@ nav a.color-change:hover {
 /* //////////////////////////////////////////////////////// */
 @media (min-width: 540px) {
   .logo {
-    margin-left: 100px;
+    margin-left: 150px;
+  }
+
+  .logo.color-change {
+    margin-left: 150px;
   }
 
   /* Rethink search bar placement in recipes index */
   .nav-search-form {
-    margin-left: 90px;
+    margin-left: 125px;
     margin-top: 230px;
   }
 
   .nav-search-form.color-change {
-    margin-left: 85px;
+    margin-left: 130px;
   }
 
   /* Switch between the bars and X. Merge styling after fixing JSX */
@@ -338,7 +342,7 @@ nav a.color-change:hover {
 
   .fa-bars,
   .nav-menu-close-icon-active {
-    margin-left: 60px;
+    margin-left: 70px;
   }
 }
 /* //////////////////////////////////////////////////////// */
@@ -348,12 +352,12 @@ nav a.color-change:hover {
     flex-direction: row;
   }
 
-  .logo {
+  .logo, .logo.color-change {
     order: 0;
     margin-left: 0px;
   }
 
-  .nav-search-form {
+  .nav-search-form, .nav-search-form.color-change {
     order: 1;
     height: 38px;
     margin: 20px 0 0 5px;
@@ -369,6 +373,15 @@ nav a.color-change:hover {
   }
 
 .nav-menu {
+  order: 2;
+  width: 189px;
+  display: flex;
+  margin-top: 20px;
+  color: white;
+  justify-content: space-around;
+}
+
+.nav-menu.color-change {
   order: 2;
   width: 189px;
   display: flex;

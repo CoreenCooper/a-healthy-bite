@@ -96,17 +96,34 @@
 }
 
 @media (min-width: 540px) {
-  .recipes-main {
-    margin-right: 60px;
-  }
-}
-
-@media (min-width: 820px) {
   .back-btn {
     margin-left: 25px;
   }
   
-  .recipes-list-items {
-      margin-left: 50px;
+  .recipes-main {
+    margin-right: 0px;
   }
+  
+  .recipes-list-items {
+    margin: 10px auto;
+}
+
+}
+
+@media (min-width: 768px) {
+  /* .recipes-main {
+    margin-right: 40px;
+  } */
+
+  /* .back-btn {
+    margin-left: 25px;
+  } */
+  
+  /* .recipes-list-items {
+      margin-left: 50px;
+  } */
+}
+
+@media (min-width: 820px) {
+
 }

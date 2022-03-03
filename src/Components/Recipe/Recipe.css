@@ -74,7 +74,6 @@
 }
 
 @media (min-width: 360px) {
-
   .recipe-image {
     width: 325px;
   }
@@ -83,11 +82,23 @@
   .recipe-prep-time {
     margin-left: 170px;
   }
-
 }
 
 @media (min-width: 540px) {
   .recipe-main {
-    margin-right: 90px;
+    margin-right: 0px;
+  }
+
+  .recipe-serving-size,
+  .recipe-prep-time {
+    margin-left: 265px;
+  }
+  
+}
+
+@media (min-width: 768px) {
+  .recipe-serving-size,
+  .recipe-prep-time {
+    margin-left: 370px;
   }
 }
