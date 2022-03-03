@@ -73,4 +73,14 @@
   .home-section {
     margin-right: 90px;
   }
+
+  .home-main-image {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-section {
+    width: 100vw;
+  }
 }

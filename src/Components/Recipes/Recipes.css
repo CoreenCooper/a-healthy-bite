@@ -90,13 +90,23 @@
 
   .recipes-list-image {
     width: 300px;
-    border-radius: 20px 20px 0 0;
+    /* border-radius: 20px 20px 0 0; */
   }
 
 }
 
 @media (min-width: 540px) {
   .recipes-main {
-    margin-right: 90px;
+    margin-right: 60px;
+  }
+}
+
+@media (min-width: 820px) {
+  .back-btn {
+    margin-left: 25px;
+  }
+  
+  .recipes-list-items {
+      margin-left: 50px;
   }
 }
