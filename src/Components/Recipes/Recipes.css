@@ -110,20 +110,19 @@
 
 }
 
-@media (min-width: 768px) {
-  /* .recipes-main {
-    margin-right: 40px;
-  } */
+@media (min-width: 912px) {
+  .recipes-main-heading {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
 
-  /* .back-btn {
-    margin-left: 25px;
-  } */
-  
-  /* .recipes-list-items {
-      margin-left: 50px;
-  } */
-}
+  .recipes-list-image {
+    width: 250px;
+    /* border-radius: 20px 20px 0 0; */
+  }
 
-@media (min-width: 820px) {
-
+  .recipes-list-items {
+    width: 250px;
+    height: 230px;
+  }
 }

@@ -102,3 +102,21 @@
     margin-left: 370px;
   }
 }
+
+@media (min-width: 820px) {
+  .recipe-serving-size,
+  .recipe-prep-time {
+    margin-left: 400px;
+  }
+  
+  .recipe-ingredients-heading {
+    margin-top: 50px;
+   }
+ }
+ 
+@media (min-width: 912px) {
+  .recipe-serving-size,
+  .recipe-prep-time {
+    margin-left: 450px;
+  }
+}
