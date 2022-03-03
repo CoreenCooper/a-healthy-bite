@@ -86,6 +86,8 @@
 
 }
 
-@media (min-width: 412px) {
-
+@media (min-width: 540px) {
+  .recipe-main {
+    margin-right: 90px;
+  }
 }

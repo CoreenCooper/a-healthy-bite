@@ -70,9 +70,9 @@
     color: var(--pine-tree);
   }
 
-  .recipes-main {
+  /* .recipes-main {
     margin-top: 100px;
-  }
+  } */
 
   .recipes-list {
     font-size: 16px;
@@ -95,6 +95,8 @@
 
 }
 
-@media (min-width: 412px) {
-
+@media (min-width: 540px) {
+  .recipes-main {
+    margin-right: 90px;
+  }
 }

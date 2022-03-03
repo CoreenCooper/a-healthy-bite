@@ -68,3 +68,9 @@
     width: 300px;
   }
 }
+
+@media (min-width: 540px) {
+  .home-section {
+    margin-right: 90px;
+  }
+}
