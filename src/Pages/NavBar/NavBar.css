@@ -287,13 +287,14 @@ nav a.color-change:hover {
 
 /* //////////////////////////////////////////////////////// */
 @media (min-width: 412px) {
+  
   .logo {
-    width: 338px;
+    margin-left: 75px;
   }
 
   /* Rethink search bar placement in recipes index */
   .nav-search-form {
-    margin-top: 318px;
+    margin-top: 319px;
   }
 
   /* Switch between the bars and X. Merge styling after fixing JSX */
@@ -309,8 +310,13 @@ nav a.color-change:hover {
 
   .fa-bars,
   .nav-menu-close-icon-active {
-    margin-left: 0;
+    margin-left: 45px;
   }
+
+  .nav-search-form.color-change {
+    margin: 10px 0 0 65px;
+  }
+  
 }
 /* //////////////////////////////////////////////////////// */
 @media (min-width: 540px) {
