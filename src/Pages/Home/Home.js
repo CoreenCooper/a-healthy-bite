@@ -1,18 +1,9 @@
-// import { useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import homeMainPic from "../../../src/assets/main.jpg";
 import linksData from "../../utils/data";
 import "./Home.css";
-// const linksData = require("../../utils/data");
 
-const Home = ({ setCategory, category }) => {
-  // const history = useHistory();
-
-  // useEffect(() => {
-  //   const handleLink = () => {
-  //     history.push("/recipes/" + category);
-  //   };
-  // }, [category, history]);
+const Home = () => {
 
   return (
     <main className="home-section">

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import "./Search.css";
 
-const Search = ({ searchResults }) => {
+const Search = () => {
   const [input, setInput] = useState("");
   const location = useLocation();
   const history = useHistory();
@@ -10,7 +10,7 @@ const Search = ({ searchResults }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     history.push(`/recipes/${input}`);
-    setInput("")
+    setInput("");
   };
 
   const handleInput = (e) => {
@@ -18,10 +18,6 @@ const Search = ({ searchResults }) => {
   };
 
   const changeColor = location.pathname === "/" ? "" : "color-change";
-  
-  const goBack = () => {
-    history.goBack();
-  };
 
   // https://api.spoonacular.com/recipes/autocomplete?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}&query=${input}&number=1
   return (

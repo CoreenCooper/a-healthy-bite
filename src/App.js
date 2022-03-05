@@ -1,15 +1,13 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { useState } from "react";
-import Home from "./Pages/Home/Home.js";
-import About from "./Components/About/About.js";
 import NavBar from "./Pages/NavBar/NavBar.js";
+import Home from "./Pages/Home/Home.js";
 import Recipe from "./Components/Recipe/Recipe.js";
-import Footer from "./Pages/Footer/Footer.js";
 import Recipes from "./Components/Recipes/Recipes.js";
+import About from "./Components/About/About.js";
+import Footer from "./Pages/Footer/Footer.js";
 import "./App.css";
 
 function App() {
-  const [category, setCategory] = useState("");
 
   return (
     <section className="App">
@@ -17,13 +15,13 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path="/">
-            <Home setCategory={setCategory} category={category} />
+            <Home />
           </Route>
           <Route exact path="/about">
             <About />
           </Route>
           <Route exact path="/recipes/:category">
-            <Recipes category={category} />
+            <Recipes />
           </Route>
           <Route exact path="/recipes/:category/:id">
             <Recipe />
