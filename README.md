@@ -23,7 +23,7 @@ An open collection of high-quality photos.
 Recipes are generated with on request per dietary category per browser session using the Spoonacular API 
 
 ## Deployed to Netlify:
-[live site](https://ahealthybite.netlify.app/)
+[live site](https://loving-stonebraker-e37e4a.netlify.app/)
 
 ## First Iteration Contributors:
 - Coreen Cooper: Technical Lead

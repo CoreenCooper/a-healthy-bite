@@ -47,18 +47,18 @@ const Recipe = () => {
         <p className="recipe-serving-size">Serving size: {servings}</p>
         <h3 className="recipe-ingredients-heading">Ingredients</h3>
         <ol className="recipe-ingredient-list">
-          {ingredients.map((ingredient) => {
+          {ingredients.map((ingredient, idx) => {
             return (
-              <li className="recipe-ingredient" key={ingredient.name}>
-                <p className="recipe-ingredient-amount">{Math.ceil(ingredient.measures.us.amount)}</p>
-                <p className="recipe-ingredient-unit">{ingredient.measures.us.unitShort}</p>
-                <p className="recipe-ingredient-name">{ingredient.name}</p>
+              <li className="recipe-ingredient" key={idx}>
+                <p className="recipe-ingredient-amount">{ingredient.original}</p>
+                {/* <p className="recipe-ingredient-unit">{ingredient.measures.us.unitLong}</p> */}
+                {/* <p className="recipe-ingredient-name">{ingredient.name}</p> */}
               </li>
             )
           })}
         </ol>
-        <ol>
-          {steps.map((stepObj) => {
+        <ol className="recipe-instructions-list">
+          {steps.map((stepObj, idx) => {
             return (
               <li className="recipe-instructions" key={stepObj.number}>{stepObj.step}</li>
             )

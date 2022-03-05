@@ -1,20 +1,18 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import homeMainPic from "../../../src/assets/main.jpg";
-import ketogenicPic from "../../../src/assets/ketogenic.jpg";
-import vegetarianPic from "../../../src/assets/vegetarian.jpg";
-import veganPic from "../../../src/assets/vegan.jpg";
-import pescatarianPic from "../../../src/assets/pescatarian.jpg";
+import linksData from "../../utils/data";
 import "./Home.css";
+// const linksData = require("../../utils/data");
 
 const Home = ({ setCategory, category }) => {
-  const history = useHistory();
+  // const history = useHistory();
 
-  useEffect(() => {
-    const handleLink = () => {
-      history.push("/recipes/" + category);
-    };
-  }, [category, history]);
+  // useEffect(() => {
+  //   const handleLink = () => {
+  //     history.push("/recipes/" + category);
+  //   };
+  // }, [category, history]);
 
   return (
     <main className="home-section">
@@ -30,51 +28,17 @@ const Home = ({ setCategory, category }) => {
         <p>Select one to start</p>
       </div>
       <ul className="home-category-list" id="category">
-        <li className="home-category-list-items">
-          <Link onClick={() => setCategory("Vegan")} to="/recipes/Vegan">
-            <img className="home-category-images" src={veganPic} alt="Vegan" />
-            <p className="home-category-text">Vegan</p>
-          </Link>
-        </li>
-        <li
-          className="home-category-list-items"
-          // onClick={() => setCategory("Vegetarian")}
-        >
-          <Link to="/recipes/Vegetarian">
-            <img
-              className="home-category-images"
-              src={vegetarianPic}
-              alt="Vegetarian"
-            />
-            <p className="home-category-text">Vegetarian</p>
-          </Link>
-        </li>
-        <li
-          className="home-category-list-items"
-          // onClick={() => setCategory("Pescatarian")}
-        >
-          <Link to="/recipes/Pescatarian">
-            <img
-              className="home-category-images"
-              src={pescatarianPic}
-              alt="Pescatarian"
-            />
-            <p className="home-category-text">Pescatarian</p>
-          </Link>
-        </li>
-        <li
-          className="home-category-list-items"
-          // onClick={() => setCategory("Ketogenic")}
-        >
-          <Link to="/recipes/Ketogenic">
-            <img
-              className="home-category-images"
-              src={ketogenicPic}
-              alt="Ketogenic"
-            />
-            <p className="home-category-text">Ketogenic</p>
-          </Link>
-        </li>
+        {linksData.map((linkData) => {
+          const { diet, image } = linkData;
+          return (
+            <li className="home-category-list-items" key={diet}>
+              <Link to={`/recipes/${diet}`}>
+                <img className="home-category-images" src={image} alt={diet} />
+                <p className="home-category-text">{`${diet[0].toUpperCase()}${diet.slice(1)}`}</p>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </main>
   );
