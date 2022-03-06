@@ -14,6 +14,9 @@ const Recipe = () => {
 
   const { id } = useParams();
 
+  // get similar recipes
+  // https://api.spoonacular.com/recipes/715538/similar?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}
+  
   useEffect(() => {
     const fetchRecipe = async () => {
       try {

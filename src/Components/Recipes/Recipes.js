@@ -30,9 +30,7 @@ const Recipes = () => {
         const res = await axios.get(
           `https://api.spoonacular.com/recipes/complexSearch?apiKey=${
             process.env.REACT_APP_SPOONACULAR_API_KEY
-          }&query=${category}&offset=${Math.floor(
-            Math.random() * 50
-          )}&number=12&nutrition=false`
+          }&diet=${category}&sort=random&number=12`
         );
         setRecipes(res.data.results);
         sessionStorage.setItem(category, JSON.stringify(res.data.results));
@@ -41,7 +39,7 @@ const Recipes = () => {
         return error;
       }
     };
-
+    
     if (sessionStorage[category] && sessionStorage[searchDateCategory]) {
       if (isDateDifferent(todaysDate, sessionStorage[searchDateCategory])) {
         fetchRecipes();

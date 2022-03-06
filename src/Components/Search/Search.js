@@ -19,6 +19,7 @@ const Search = () => {
 
   const changeColor = location.pathname === "/" ? "" : "color-change";
 
+  // autocomplete recipe search
   // https://api.spoonacular.com/recipes/autocomplete?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}&query=${input}&number=1
   return (
     <form onSubmit={handleSubmit} className={`nav-search-form ${changeColor}`}>
