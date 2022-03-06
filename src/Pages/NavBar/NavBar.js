@@ -5,7 +5,7 @@ import Menu from "../../Components/Menu/Menu";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const [active, setActive] = useState(false);
+  // const [active, setActive] = useState(false);
   const location = useLocation();
 
   const changeColor = location.pathname === "/" ? "" : "color-change";

@@ -1,11 +1,33 @@
 import { useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
+import axios from "axios";
 import "./Search.css";
 
 const Search = () => {
+  // const [recipes, setRecipes] = useState([]);
   const [input, setInput] = useState("");
   const location = useLocation();
   const history = useHistory();
+
+  // const fetchSearchResults = async () => {
+  //   try {
+  //     const res = await axios.get(
+  //       `https://api.spoonacular.com/recipes/autocomplete?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}&query=${input}&sort=random&number=1`
+  //     );
+  //     // console.log(res.data)
+  //     debugger
+  //     setRecipes(res.data.results);
+  //   } catch (error) {
+  //     return error;
+  //   }
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   fetchSearchResults();
+  //   history.push(`/recipes/${input}`);
+  //   setInput("");
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();

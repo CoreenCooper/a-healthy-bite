@@ -21,6 +21,8 @@ const Recipes = () => {
   const isDateDifferent = (today, savedDate) => {
     return today !== savedDate;
   };
+  // get random recipes by category and search term
+  // `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}&diet=${category}&query=${input}&sort=random`
 
   useEffect(() => {
     let todaysDate = getTodaysDate();

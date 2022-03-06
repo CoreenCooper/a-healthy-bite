@@ -16,13 +16,15 @@ const Recipe = () => {
 
   // get similar recipes
   // https://api.spoonacular.com/recipes/715538/similar?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}
-  
+
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
         const res = await axios.get(
-          `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}&includeNutrition=false`
+          `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}`
         );
+        console.log(res.data);
+        debugger
         setRecipe(res.data);
         setIngredients(res.data.extendedIngredients);
         setSteps(res.data.analyzedInstructions[0].steps);
