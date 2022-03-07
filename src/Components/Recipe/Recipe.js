@@ -3,11 +3,11 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./Recipe.css";
 import BackButton from "../BackButton/BackButton";
+import { formatInstructions } from "../../utils/helperFunctions";
 
 const Recipe = () => {
   const [steps, setSteps] = useState([]);
   const [ingredients, setIngredients] = useState([]);
-
   const [recipe, setRecipe] = useState({});
   const { title, image, sourceUrl, servings, readyInMinutes, sourceName } =
     recipe;
@@ -23,8 +23,6 @@ const Recipe = () => {
         const res = await axios.get(
           `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}`
         );
-        console.log(res.data);
-        // debugger
         setRecipe(res.data);
         setIngredients(res.data.extendedIngredients);
         setSteps(res.data.analyzedInstructions[0].steps);
@@ -59,12 +57,8 @@ const Recipe = () => {
         </ol>
         <h3 className="recipe-preparations-heading">Instructions</h3>
         <ol className="recipe-instructions-list">
-          {steps.map((stepObj, idx) => {
-            return (
-              <li className="recipe-instructions" key={stepObj.number}>
-                {stepObj.step}
-              </li>
-            );
+          {formatInstructions(steps).map((step, idx) => {
+            return <li className="recipe-instructions" key={idx}>{`${step}.`}</li>;
           })}
         </ol>
         <a

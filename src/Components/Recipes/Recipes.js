@@ -32,7 +32,7 @@ const Recipes = () => {
         const res = await axios.get(
           `https://api.spoonacular.com/recipes/complexSearch?apiKey=${
             process.env.REACT_APP_SPOONACULAR_API_KEY
-          }&diet=${category}&sort=random&number=12`
+          }&diet=${category}&instructionsRequired=true&sort=random&number=12`
         );
         setRecipes(res.data.results);
         sessionStorage.setItem(category, JSON.stringify(res.data.results));

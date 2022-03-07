@@ -16,6 +16,7 @@ const searchPlaceholders = {
   "/recipes/vegetarian": "Search by ingredients",
   "/recipes/vegan": "Search by ingredients",
   "/recipes/ketogenic": "Search by ingredients",
+  "/recipes/pescatarian": "Search by ingredients",
 };
 
 export { homeLinksData, searchPlaceholders };

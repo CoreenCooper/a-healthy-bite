@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 
 const NavBarWrapper = () => {
     const location = useLocation();
-    console.log(location)
+    // console.log(location)
 
 
   return <NavBar />;
@@ -11,4 +11,4 @@ const NavBarWrapper = () => {
 
 export default NavBarWrapper;
 
-// change search placeholder by location
+// change search by location
