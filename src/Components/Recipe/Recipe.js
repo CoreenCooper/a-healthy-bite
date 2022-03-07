@@ -42,19 +42,19 @@ const Recipe = () => {
         <p className="recipe-prep-time">Preparation time: {readyInMinutes}</p>
         <p className="recipe-serving-size">Serving size: {servings}</p>
         <h3 className="recipe-ingredients-heading">Ingredients</h3>
-        <ol className="recipe-ingredient-list">
+        <ul className="recipe-ingredient-list">
           {ingredients.map((ingredient, idx) => {
             return (
               <li className="recipe-ingredient" key={idx}>
-                <p className="recipe-ingredient-amount">
+                {/* <p className="recipe-ingredient-amount"> */}
                   {ingredient.original}
-                </p>
+                {/* </p> */}
                 {/* <p className="recipe-ingredient-unit">{ingredient.measures.us.unitLong}</p> */}
                 {/* <p className="recipe-ingredient-name">{ingredient.name}</p> */}
               </li>
             );
           })}
-        </ol>
+        </ul>
         <h3 className="recipe-preparations-heading">Instructions</h3>
         <ol className="recipe-instructions-list">
           {formatInstructions(steps).map((step, idx) => {

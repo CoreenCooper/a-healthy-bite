@@ -13,8 +13,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-ul,
-ol {
+ol, ul {
   list-style: none;
 }
 

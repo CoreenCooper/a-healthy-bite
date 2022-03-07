@@ -43,17 +43,23 @@
     margin-left: 100px;
   }
 
-  .recipe-ingredients-heading {
+  /* .recipe-ingredients-heading {
     padding: 5px;
-  }
+  } */
 
   .recipe-ingredient-list {
-    padding-bottom: 10px;
+    margin: 5px 12px;
+    list-style-type: "- ";
   }
 
-  .recipe-ingredient {
-    display: flex;
+  .recipe-instructions-list {
+    margin: 5px 20px;
+    list-style-type: decimal;
   }
+
+  /* .recipe-ingredient {
+    display: flex;
+  } */
 
   .recipe-ingredient-name {
     margin-left: 3px;
@@ -93,7 +99,6 @@
   .recipe-prep-time {
     margin-left: 265px;
   }
-  
 }
 
 @media (min-width: 768px) {
@@ -111,9 +116,9 @@
 
   .recipe-ingredients-heading {
     margin-top: 50px;
-   }
- }
- 
+  }
+}
+
 @media (min-width: 912px) {
   .recipe-serving-size,
   .recipe-prep-time {
