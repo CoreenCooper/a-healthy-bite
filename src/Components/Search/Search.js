@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
+import { searchPlaceholders } from "../../utils/data";
 import "./Search.css";
 
 const Search = () => {
@@ -50,7 +51,7 @@ const Search = () => {
         onChange={handleInput}
         name="nav-input"
         type="text"
-        placeholder="Search by Ingredient"
+        placeholder={searchPlaceholders[location.pathname] || "Search for a new recipe"}
         size="30"
         value={input}
       />

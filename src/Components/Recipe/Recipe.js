@@ -24,7 +24,7 @@ const Recipe = () => {
           `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}`
         );
         console.log(res.data);
-        debugger
+        // debugger
         setRecipe(res.data);
         setIngredients(res.data.extendedIngredients);
         setSteps(res.data.analyzedInstructions[0].steps);

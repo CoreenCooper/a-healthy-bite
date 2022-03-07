@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import homeMainPic from "../../../src/assets/main.jpg";
-import linksData from "../../utils/data";
+// import linksData from "../../utils/data";
+import { homeLinksData } from "../../utils/data"
 import "./Home.css";
 
 const Home = () => {
@@ -19,7 +20,7 @@ const Home = () => {
         <p>Select one to start</p>
       </div>
       <ul className="home-category-list" id="category">
-        {linksData.map((linkData) => {
+        {homeLinksData.map((linkData) => {
           const { diet, image } = linkData;
           return (
             <li className="home-category-list-items" key={diet}>
