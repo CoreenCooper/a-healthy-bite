@@ -1,38 +1,38 @@
 import { useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
-// import axios from "axios";
 import { searchPlaceholders } from "../../utils/data";
+import axios from "axios";
 import "./Search.css";
 
-const Search = () => {
-  // const [recipes, setRecipes] = useState([]);
+const Search = ({ setDishes, changeColor }) => {
   const [input, setInput] = useState("");
   const location = useLocation();
   const history = useHistory();
 
-  // const fetchSearchResults = async () => {
-  //   try {
-  //     const res = await axios.get(
-  //       `https://api.spoonacular.com/recipes/autocomplete?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}&query=${input}&sort=random&number=1`
-  //     );
-  //     // console.log(res.data)
-  //     debugger
-  //     setRecipes(res.data.results);
-  //   } catch (error) {
-  //     return error;
-  //   }
-  // };
+  const fetchRecipesByName = async () => {
+    try {
+      const res = await axios.get(
+        `https://api.spoonacular.com/recipes/autocomplete?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}&query=${input}&sort=random&number=1`
+      );
+      console.log(res.data);
+      // debugger
+      setDishes(res.data);
+    } catch (error) {
+      return error;
+    }
+  };
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
-  //   fetchSearchResults();
   //   history.push(`/recipes/${input}`);
   //   setInput("");
   // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push(`/recipes/${input}`);
+    fetchRecipesByName();
+    // history.push(`/recipes/${input}`);
+
     setInput("");
   };
 
@@ -40,7 +40,7 @@ const Search = () => {
     setInput(e.target.value);
   };
 
-  const changeColor = location.pathname === "/" ? "" : "color-change";
+  // const changeColor = location.pathname === "/" ? "" : "color-change";
 
   // autocomplete recipe search
   // https://api.spoonacular.com/recipes/autocomplete?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}&query=${input}&number=1
@@ -51,7 +51,9 @@ const Search = () => {
         onChange={handleInput}
         name="nav-input"
         type="text"
-        placeholder={searchPlaceholders[location.pathname] || "Search for a new recipe"}
+        placeholder={
+          searchPlaceholders[location.pathname] || "Search for a new recipe"
+        }
         size="30"
         value={input}
       />

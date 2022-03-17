@@ -1,19 +1,18 @@
 import { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../Menu/Menu.css";
 
-const Menu = () => {
+const Menu = ({ changeColor }) => {
   const [active, setActive] = useState(false);
-  const location = useLocation();
-  // const history = useHistory();
+  // const location = useLocation();
 
-  const changeColor = location.pathname === "/" ? "" : "color-change";
-  const changeMenu = active ? "nav-menu-collapsed-icon-active" : "nav-menu-collapsed-icon";
-
-  
+  // const changeColor = location.pathname === "/" ? "" : "color-change";
+  const changeMenu = active
+    ? "nav-menu-collapsed-icon-active"
+    : "nav-menu-collapsed-icon";
 
   return (
-      <>
+    <>
       <ul className={active ? "nav-menu nav-menu-active" : "nav-menu"}>
         <NavLink className={`${changeColor}`} to="/">
           <li>Home</li>
@@ -27,10 +26,9 @@ const Menu = () => {
       </ul>
 
       <div
-        className={
-          `${changeMenu} ${changeColor}`
-        }
-        onClick={() => setActive(!active)}>
+        className={`${changeMenu} ${changeColor}`}
+        onClick={() => setActive(!active)}
+      >
         <i className="fas fa-bars"></i>
       </div>
 
@@ -42,7 +40,7 @@ const Menu = () => {
       >
         X
       </div>
-      </>
+    </>
   );
 };
 
