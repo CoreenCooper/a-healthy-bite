@@ -33,6 +33,9 @@ const Recipe = () => {
     fetchRecipe();
   }, [id]);
 
+  // Why does this run three additional times.
+  console.log(steps);
+
   return (
     <main className="recipe-main">
       <BackButton />

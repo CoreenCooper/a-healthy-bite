@@ -4,7 +4,7 @@ import Search from "../../Components/Search/Search";
 import Menu from "../../Components/Menu/Menu";
 import "./NavBar.css";
 
-const NavBar = ({ setDishes, changeColor }) => {
+const NavBar = ({ changeColor,  setBulkRecipes }) => {
   // const location = useLocation();
 
   // const changeColor = location.pathname === "/" ? "" : "color-change";
@@ -15,7 +15,7 @@ const NavBar = ({ setDishes, changeColor }) => {
         <h1 className="logo-title color-change">A Healthy Bite</h1>
         <h5 className="Subheading">Healthy food for every mood</h5>
       </NavLink>
-      <Search setDishes={setDishes} changeColor={changeColor} />
+      <Search setBulkRecipes={setBulkRecipes} changeColor={changeColor} />
       <Menu changeColor={changeColor} />
     </nav>
   );

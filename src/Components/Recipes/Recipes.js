@@ -4,7 +4,7 @@ import axios from "axios";
 import "./Recipes.css";
 import BackButton from "../BackButton/BackButton";
 
-const Recipes = () => {
+const Recipes = ({ bulkRecipes }) => {
   const [recipes, setRecipes] = useState([]);
   const { category } = useParams();
 
@@ -34,7 +34,7 @@ const Recipes = () => {
             process.env.REACT_APP_SPOONACULAR_API_KEY
           }&diet=${category}&instructionsRequired=true&sort=random&number=12`
         );
-        console.log(res.data.results)
+        // console.log(res.data.results)
         setRecipes(res.data.results);
         // sessionStorage.setItem(category, JSON.stringify(res.data.results));
         // sessionStorage.setItem(searchDateCategory, todaysDate);
@@ -60,8 +60,10 @@ const Recipes = () => {
       <h2 className="recipes-main-heading">
         {category[0].toUpperCase() + category.slice(1)} Dishes
       </h2>
+      {/* need a ternary to switch between bulkRecipes and recipes */}
+      {/* should check if array isn't empty then map */}
       <ul className="recipes-list">
-        {recipes.map((recipe) => {
+        {(bulkRecipes || recipes).map((recipe) => {
           return (
             <li className="recipes-list-items" key={recipe.id}>
               <Link

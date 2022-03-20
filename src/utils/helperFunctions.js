@@ -8,7 +8,7 @@ const formatInstructions = (steps) => {
     .replace(/\.\s+/g, ".")
     .split(".");
 
-  instructions.pop();
+  // instructions.pop();
   return instructions;
 };
 

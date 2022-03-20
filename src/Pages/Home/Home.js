@@ -24,6 +24,7 @@ const Home = () => {
           const { diet, image } = linkData;
           return (
             <li className="home-category-list-items" key={diet}>
+              {/* should this be a link or an onclick? */}
               <Link to={`/recipes/${diet}`}>
                 <img className="home-category-images" src={image} alt={diet} />
                 <p className="home-category-text">{`${diet[0].toUpperCase()}${diet.slice(1)}`}</p>
