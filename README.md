@@ -1,4 +1,4 @@
-# A Healthy Bite [![Netlify Status](https://api.netlify.com/api/v1/badges/0a996ebb-3e4c-47c3-a2d9-a606f56fdb0d/deploy-status)](https://app.netlify.com/sites/ahealthybite/deploys)
+# A Healthy Bite 
 ### Recipe Application
  Wellness through healthy food choices.
  A fully responsive create-react-app that displays twelve random recipes daily by users selection of dietary category.
